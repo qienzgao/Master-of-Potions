@@ -1,0 +1,41 @@
+{
+  "name": "JS-Project",
+  "version": "1.0.0",
+  "description": "# Background  Master of Potions is a game which users should be able to play around with different materials to make magical potions. The game will mainly focus on animation/visualization that create a fantacy-like vibe along with magical interaction with users. The main game scene will be in a lab-like environment and all kinds of materials will be display on different places around the lab. Users can hover over materials to see certain effects and click on the material to manipulate it accordingly.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qienzgao/JS-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qienzgao/JS-Project/issues"
+  },
+  "homepage": "https://github.com/qienzgao/JS-Project#readme",
+  "dependencies": {
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.3",
+    "core-js": "^3.21.0",
+    "css-loader": "^6.6.0",
+    "mini-css-extract-plugin": "^2.5.3",
+    "regenerator-runtime": "^0.13.9",
+    "sass": "^1.49.7",
+    "sass-loader": "^12.4.0",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
+  }, 
+  "browserslist": [
+    "defaults"
+  ],
+  "scripts": {
+    "watch": "webpack --watch --mode=development",
+    "build": "webpack --mode=production"
+  }
+}
+
