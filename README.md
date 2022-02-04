@@ -8,6 +8,7 @@ Important animations (therefore should be prioritize) include:
   1) process of making potions (different methods with different animations?);
   2) when potion-making succeeds;
   3) when potion-making fails;
+
 important visualizations include:
   1) when the cursor hovers over different objects;
   2) click on the object.
