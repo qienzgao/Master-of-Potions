@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./dist/main.css" />
     <script src="./dist/main.js"></script>
     <title>Master of Potions</title>
+    <style id="background">
+    </style>
 </head>
 
 <body>
@@ -15,22 +17,15 @@
         <h1>Master of Potions</h1>
     </div>
 
-    <div class="start">
-        
+    <div class="workstation">
+        <canvas id="game-canvas" width="800" height="450"></canvas>     
     </div>
-
-    <section>
-        <div class="workstation">
-            
-            
-        </div>
         
-        <div class="controller-container">
-            <button id="brew">BREW</button>
-            <button id="extract">EXTRACT</button>
-            <button id="burn">BURN</button>
-        </div>
-    </section>
+    <div class="controller-container">
+        <button id="brew">BREW</button>
+        <button id="extract">EXTR</button>
+        <button id="burn">BURN</button>
+    </div>
 
     <div class="tools-container">
         <h2>TOOLS</h2>
@@ -56,11 +51,11 @@
         <button id="eyes">EYES</button>
         <button id="mask">MASK</button>
         <button id="lock">LOCK</button>
-    </div>
+    </ul>
 
     <div class="info-container">
-        <a href="https://github.com/qienzgao"><img src="src/images/github.png" alt="Github" width="50" height="50" /></a>
-        <a href="https://www.linkedin.com/in/qien-gao-1390071a7/"><img src="src/images/linkedin.png" alt="Linkedin" width="40" height="40" /></a>
+        <a id="git" href="https://github.com/qienzgao"><img src="src/images/github.png" alt="Github" width="38" height="38" /></a>
+        <a id="linkedin" href="https://www.linkedin.com/in/qien-gao-1390071a7/"><img src="src/images/linkedin.png" alt="Linkedin" width="40" height="40" /></a>
     </div>
 </body>
 
