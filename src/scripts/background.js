@@ -1,7 +1,7 @@
-let mediaElement;
-let playing = false;
+// let mediaElement;
+// let playing = false;
 // MediaElement('nyan', {
-//     pluginPath: './scripts/background',
+//     pluginPath: '/assets/mediaelement/',
 //     success: function (me) {
 //         mediaElement = me;
 //         me.play();
@@ -12,96 +12,96 @@ let playing = false;
 //     }
 // });
 
-let mousePos = view.center + [view.bounds.width / 3, 100];
-let position = view.center;
+// let mousePos = view.center + [view.bounds.width / 3, 100];
+// let position = view.center;
 
-function onFrame(event) {
-    position += (mousePos - position) / 10;
-    let vector = (view.center - position) / 10;
-    moveStars(vector * 3);
-    moveRainbow(vector, event);
-}
+// function onFrame(event) {
+//     position += (mousePos - position) / 10;
+//     let vector = (view.center - position) / 10;
+//     moveStars(vector * 3);
+//     moveRainbow(vector, event);
+// }
 
-function onMouseMove(event) {
-    mousePos = event.point;
-}
+// function onMouseMove(event) {
+//     mousePos = event.point;
+// }
 
-function onKeyDown(event) {
-    if (event.key == 'space')
-        project.activeLayer.selected = !project.activeLayer.selected;
-}
+// function onKeyDown(event) {
+//     if (event.key == 'space')
+//         project.activeLayer.selected = !project.activeLayer.selected;
+// }
 
-let moveStars = new function () {
-    // The amount of symbol we want to place;
-    let count = 50;
+// let moveStars = new function () {
+//     // The amount of symbol we want to place;
+//     let count = 50;
 
-    // Create a symbol, which we will use to place instances of later:
-    let path = new Path.Circle({
-        center: [0, 0],
-        radius: 5,
-        fillColor: 'white',
-        strokeColor: 'black'
-    });
+//     // Create a symbol, which we will use to place instances of later:
+//     let path = new Path.Circle({
+//         center: [0, 0],
+//         radius: 5,
+//         fillColor: 'white',
+//         strokeColor: 'black'
+//     });
 
-    let symbol = new Symbol(path);
+//     let symbol = new Symbol(path);
 
-    // Place the instances of the symbol:
-    for (let i = 0; i < count; i++) {
-        // The center position is a random point in the view:
-        let center = Point.random() * view.size;
-        let placed = symbol.place(center);
-        placed.scale(i / count + 0.01);
-        placed.data = {
-            vector: new Point({
-                angle: Math.random() * 360,
-                length: (i / count) * Math.random() / 5
-            })
-        };
-    }
+//     // Place the instances of the symbol:
+//     for (let i = 0; i < count; i++) {
+//         // The center position is a random point in the view:
+//         let center = Point.random() * view.size;
+//         let placed = symbol.place(center);
+//         placed.scale(i / count + 0.01);
+//         placed.data = {
+//             vector: new Point({
+//                 angle: Math.random() * 360,
+//                 length: (i / count) * Math.random() / 5
+//             })
+//         };
+//     }
 
-    let vector = new Point({
-        angle: 45,
-        length: 0
-    });
+//     let vector = new Point({
+//         angle: 45,
+//         length: 0
+//     });
 
-    function keepInView(item) {
-        let position = item.position;
-        let viewBounds = view.bounds;
-        if (position.isInside(viewBounds))
-            return;
-        let itemBounds = item.bounds;
-        if (position.x > viewBounds.width + 5) {
-            position.x = -item.bounds.width;
-        }
+//     function keepInView(item) {
+//         let position = item.position;
+//         let viewBounds = view.bounds;
+//         if (position.isInside(viewBounds))
+//             return;
+//         let itemBounds = item.bounds;
+//         if (position.x > viewBounds.width + 5) {
+//             position.x = -item.bounds.width;
+//         }
 
-        if (position.x < -itemBounds.width - 5) {
-            position.x = viewBounds.width;
-        }
+//         if (position.x < -itemBounds.width - 5) {
+//             position.x = viewBounds.width;
+//         }
 
-        if (position.y > viewBounds.height + 5) {
-            position.y = -itemBounds.height;
-        }
+//         if (position.y > viewBounds.height + 5) {
+//             position.y = -itemBounds.height;
+//         }
 
-        if (position.y < -itemBounds.height - 5) {
-            position.y = viewBounds.height
-        }
-    }
+//         if (position.y < -itemBounds.height - 5) {
+//             position.y = viewBounds.height
+//         }
+//     }
 
-    return function (vector) {
-        // Run through the active layer's children list and change
-        // the position of the placed symbols:
-        let layer = project.activeLayer;
-        for (let i = 0; i < count; i++) {
-            let item = layer.children[i];
-            let size = item.bounds.size;
-            let length = vector.length / 10 * size.width / 10;
-            item.position += vector.normalize(length) + item.data.vector;
-            keepInView(item);
-        }
-    };
-};
+//     return function (vector) {
+//         // Run through the active layer's children list and change
+//         // the position of the placed symbols:
+//         let layer = project.activeLayer;
+//         for (let i = 0; i < count; i++) {
+//             let item = layer.children[i];
+//             let size = item.bounds.size;
+//             let length = vector.length / 10 * size.width / 10;
+//             item.position += vector.normalize(length) + item.data.vector;
+//             keepInView(item);
+//         }
+//     };
+// };
 
-export default MediaElement;
+// export default MediaElement;
 // let moveRainbow = new function () {
 //     let paths = [];
 //     let colors = ['red', 'orange', 'yellow', 'lime', 'blue', 'purple'];
@@ -179,3 +179,26 @@ export default MediaElement;
 //             mediaElement.setVolume(vector.length / 200);
 //     }
 // }
+
+// const button = document.getElementById("dream");
+
+// const animateMove = (element, prop, pixels) =>
+//     anime({
+//         targets: element,
+//         [prop]: `${pixels}px`,
+//         easing: "easeOutCirc"
+//     });
+
+// ["mouseover", "click"].forEach(function (el) {
+//     button.addEventListener(el, function (event) {
+//         const top = getRandomNumber(window.innerHeight - this.offsetHeight);
+//         const left = getRandomNumber(window.innerWidth - this.offsetWidth);
+
+//         animateMove(this, "left", left).play();
+//         animateMove(this, "top", top).play();
+//     });
+// });
+
+// const getRandomNumber = (num) => {
+//     return Math.floor(Math.random() * (num + 1));
+// };

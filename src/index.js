@@ -1,28 +1,43 @@
-// import MediaElement from "./scripts/background"
+// import button from "./scripts/background"
+import Tool from "./scripts/tool"
+import Ingredient from "./scripts/ingredient"
 
-// document.getElementById('background').addEventListener('DOMContentLoaded', ()=>{
-//     console.log('hello world')
+let tool = new Tool(); 
+let ingredient = new Ingredient(); 
+let potion = null; 
+
+// document.addEventListener('DOMContentLoaded', ()=>{
+//     console.log("hello")
 // })
 
-const button = document.getElementById("dream");
+document.getElementById('flower').addEventListener('click', ()=>{
+    ingredient.setSelected('flower'); 
+    console.log(ingredient.selected); 
+})
 
-const animateMove = (element, prop, pixels) =>
-    anime({
-        targets: element,
-        [prop]: `${pixels}px`,
-        easing: "easeOutCirc"
-    });
+document.getElementById('feather').addEventListener('click', ()=>{
+    tool.selectedTool('feather', ingredient);
+    console.log(tool.created);
+})
 
-["mouseover", "click"].forEach(function (el) {
-    button.addEventListener(el, function (event) {
-        const top = getRandomNumber(window.innerHeight - this.offsetHeight);
-        const left = getRandomNumber(window.innerWidth - this.offsetWidth);
+document.getElementById('burn').addEventListener('click', ()=>{
+    ingredient.selected = null; 
+    tool.created = null; 
+})
 
-        animateMove(this, "left", left).play();
-        animateMove(this, "top", top).play();
-    });
-});
+document.getElementById('extract').addEventListener('click', () => {
+    ingredient.addIngredient(tool.created); 
+    ingredient.selected = null;
+    tool.created = null; 
+})
 
-const getRandomNumber = (num) => {
-    return Math.floor(Math.random() * (num + 1));
-};
+document.getElementById('brew').addEventListener('click', () => {
+    potion = ingredient.brew(); 
+})
+
+
+
+
+
+
+
