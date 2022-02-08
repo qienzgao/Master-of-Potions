@@ -19,15 +19,10 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-#background {
-  position:sticky;  
-  z-index:-9999;           
-  top:0;                
-  left:0; 
-}
-
 #title {
-  font-size: x-large;
+  color: white;
+  font-family: Luminari, fantasy;
+  font-size: xx-large;
   text-align: center;
   margin: auto;
   width: 50%;
@@ -66,12 +61,18 @@ time, mark, audio, video {
   }
 
 .tools-container {
+  font-family: Chalkduster, fantasy;
+  color: white;
+  font-size: larger;
+  text-align: center;
   display: flex;
   float: right; 
   flex-direction: column;
   padding: 3%;
 }
   .tools-container button {
+    font-family: URW Chancery L, cursive;
+    color: white;
     font-size: 16px;
     padding: 10px 7px;
     border: none;
@@ -81,12 +82,18 @@ time, mark, audio, video {
   }
 
 .ingredients-container {
+  font-family: Chalkduster, fantasy;
+  color: white;
+  text-align: center;
+  font-size: larger;
   display: flex;
   float: left; 
   flex-direction: column;
   padding: 3%;
 }
 .ingredients-container button {
+  font-family: URW Chancery L, cursive;
+  color: white;
   font-size: 16px;
   padding: 10px 5px;
   border: none;

@@ -27,8 +27,7 @@ class Tool {
     tickle(ingredient){
         if(ingredient.selected === 'flower') {
             this.created = 'laughingFlower'
-            console.log(`${this.created} is created!`)
-            // addIngredient('laughingFlower')
+            console.log(`${this.created} is created! Extract it if you'd like to add it to your pot.`)
         } else {
             console.log("Nothing happens...")
         }
@@ -37,7 +36,7 @@ class Tool {
     cut(ingredient){
         if(ingredient.selected === 'heart') {
             this.created = 'brokenHeart'
-            console.log(`${this.created} is created!`)
+            console.log(`${this.created} is created! Extract it if you'd like to add it to your pot.`)
         } else {
             console.log('Why cutting it?')
         }
@@ -46,7 +45,7 @@ class Tool {
     biubiubiu(ingredient){
         if(ingredient.selected === 'darkRoom') {
             this.created = 'catAttention'
-            console.log(`${this.created} is created!`)
+            console.log(`${this.created} is created! Extract it if you'd like to add it to your pot.`)
         } else {
             console.log('Nothing happens...')
         }
@@ -55,7 +54,7 @@ class Tool {
     sweeten(ingredient) {
         if (ingredient.selected === 'nothings') {
             this.created = 'sweetNothings'
-            console.log(`${this.created} is created!`)
+            console.log(`${this.created} is created! Extract it if you'd like to add it to your pot.`)
         } else {
             console.log('Nothing happens...')
         }
@@ -64,7 +63,7 @@ class Tool {
     feed(ingredient) {
         if (ingredient.selected === 'dragon') {
             this.created = 'dragonSaliva'
-            console.log(`${this.created} is created!`)
+            console.log(`${this.created} is created! Extract it if you'd like to add it to your pot.`)
         } else {
             console.log(`You can't feed a ${ingredient.selected}!`)
         }
@@ -73,7 +72,7 @@ class Tool {
     saySomethingHurtful(ingredient) {
         if (ingredient.selected === 'eyes') {
             this.created = 'frozenTears'
-            console.log(`${this.created} is created!`)
+            console.log(`${this.created} is created! Extract it if you'd like to add it to your pot.`)
         } else {
             console.log('Nothing happens...')
         }
@@ -82,7 +81,7 @@ class Tool {
     love(ingredient) {
         if (ingredient.selected === 'mask') {
             this.created = 'happyFace'
-            console.log(`${this.created} is created!`)
+            console.log(`${this.created} is created! Extract it if you'd like to add it to your pot.`)
         } else {
             console.log('Nothing happens...')
         }
@@ -93,7 +92,7 @@ class Tool {
             let code = prompt("It seems that you need to enter a secret code to use the key", 'What will it be?')
             if (code === '1003') {
                 this.created = 'secretIngredient'
-                console.log(`${this.created} is created!`)
+                console.log(`${this.created} is created! Extract it if you'd like to add it to your pot.`)
             } else {
                 console.log(`It's not working...`)
             }

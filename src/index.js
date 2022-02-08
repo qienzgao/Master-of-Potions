@@ -105,6 +105,7 @@ document.getElementById('brew').addEventListener('click', () => {
 document.getElementById('redo').addEventListener('click', () => {
     tool = new Tool();
     ingredient = new Ingredient(); 
+    console.log('Your pot is empty now.')
 })
 
 
