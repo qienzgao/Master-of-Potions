@@ -5,6 +5,13 @@ import Ingredient from "./scripts/ingredient"
 let tool = new Tool(); 
 let ingredient = new Ingredient(); 
 let potion = null; 
+// const current_rotation = 0; 
+
+//background rotation:
+// document.querySelector("#sign1").addEventListener('click', function () {
+//     current_rotation += 90;
+//     document.querySelector("#sign1").style.transform = `rotate(' + current_rotation + 'deg)`;
+// });
 
 //ingredient-tool interaction:
 

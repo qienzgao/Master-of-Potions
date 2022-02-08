@@ -4,19 +4,30 @@ body {
    background-size: cover;
 }
 
+@keyframes mymove {
+    from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
 #sign1 {
-    // opacity: 0.8;
+    opacity: 0.8;
     padding: 0;
     margin: auto;
     display: block;
     height: 500px;
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 12%;
     left: 0;
     right: 0;
     z-index: -2;
+    animation: mymove 20s infinite linear
 }
+
 
 #sign2 {
     opacity: 0.5;
@@ -24,38 +35,33 @@ body {
     margin: auto;
     display: block;
     height: 1000px;
-    position: absolute;
+    position: fixed;
     top: -35%;
-    // bottom: auto;
     left: -15%;
-    // right: auto;
     z-index: -3;
+    animation: mymove 100s infinite linear
 }
-
-#sign4 {
-//     opacity: 0.9;
-    padding: 0;
-    margin: auto;
-    display: block;
-    height: 800px;
-    position: absolute;
-    top: -20%;
-    // bottom: auto;
-    left: 50%;
-    // right: auto;
-    z-index: -4;
-}
-
 #sign3 {
-    opacity: 0.5;
+    opacity: 0.8;
     padding: 0;
     margin: auto;
     display: block;
     height: 1000px;
-    position: absolute;
-    top: 40%;
-    // bottom: auto;
-    left: 50%;
-    // right: auto;
+    position: fixed;
+    top: 50%; 
+    right: 0;
     z-index: -4;
+    animation: mymove 60s infinite linear
+}
+
+#sign4 {
+    padding: 0;
+    margin: auto;
+    display: block;
+    height: 800px;
+    position: fixed;
+    top: -20%;
+    left: 50%;
+    z-index: -4;
+    animation: mymove 70s infinite linear
 }

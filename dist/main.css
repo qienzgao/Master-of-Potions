@@ -23,7 +23,7 @@ time, mark, audio, video {
 }
 
 #title {
-  color: white;
+  color: lightblue;
   font-family: Luminari, fantasy;
   font-size: xx-large;
   text-align: center;
@@ -65,47 +65,77 @@ time, mark, audio, video {
 }
 
 .tools-container {
-  font-family: Chalkduster, fantasy;
-  color: white;
+  color: lightblue;
+  font-family: Luminari, fantasy;
   font-size: larger;
   text-align: center;
   display: flex;
   float: right;
   flex-direction: column;
-  padding: 3%;
+  padding: 2%;
 }
 
 .tools-container button {
+  opacity: 0.6;
   font-family: URW Chancery L, cursive;
-  color: white;
-  font-size: 16px;
-  padding: 10px 7px;
+  font-weight: bolder;
+  font-size: 20px;
+  background: none;
+  position: relative;
+  padding: auto;
   border: none;
-  background-color: transparent;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  mix-blend-mode: screen;
   cursor: pointer;
 }
 
+.tools-container button::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: palegreen;
+  border-radius: 50px;
+  content: "";
+  mix-blend-mode: color-burn;
+}
+
 .ingredients-container {
-  font-family: Chalkduster, fantasy;
-  color: white;
+  color: lightblue;
+  font-family: Luminari, fantasy;
   text-align: center;
   font-size: larger;
   display: flex;
   float: left;
   flex-direction: column;
-  padding: 3%;
+  padding: 2%;
 }
 
 .ingredients-container button {
+  opacity: 0.9;
   font-family: URW Chancery L, cursive;
-  color: white;
-  font-size: 16px;
-  padding: 10px 5px;
+  font-size: 20px;
+  font-weight: bolder;
+  background: none;
+  position: relative;
+  padding: auto;
   border: none;
-  background-color: transparent;
-  margin-bottom: 10px;
+  margin-top: 15px;
+  mix-blend-mode: screen;
   cursor: pointer;
+}
+
+.ingredients-container button::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: cornflowerblue;
+  border-radius: 50px;
+  content: "";
+  mix-blend-mode: color-burn;
 }
 
 .info-container {
@@ -121,23 +151,37 @@ time, mark, audio, video {
   margin-left: 15px;
 }
 
+.info-container img {
+  opacity: 0.8;
+}
+
 body {
   background-image: url("/src/images/purple.jpeg");
   background-color: #cccccc;
   background-size: cover;
 }
 
+@keyframes mymove {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
 #sign1 {
+  opacity: 0.8;
   padding: 0;
   margin: auto;
   display: block;
   height: 500px;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 12%;
   left: 0;
   right: 0;
   z-index: -2;
+  animation: mymove 20s infinite linear;
 }
 
 #sign2 {
@@ -146,10 +190,24 @@ body {
   margin: auto;
   display: block;
   height: 1000px;
-  position: absolute;
+  position: fixed;
   top: -35%;
   left: -15%;
   z-index: -3;
+  animation: mymove 100s infinite linear;
+}
+
+#sign3 {
+  opacity: 0.8;
+  padding: 0;
+  margin: auto;
+  display: block;
+  height: 1000px;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  z-index: -4;
+  animation: mymove 60s infinite linear;
 }
 
 #sign4 {
@@ -157,20 +215,9 @@ body {
   margin: auto;
   display: block;
   height: 800px;
-  position: absolute;
+  position: fixed;
   top: -20%;
   left: 50%;
   z-index: -4;
-}
-
-#sign3 {
-  opacity: 0.5;
-  padding: 0;
-  margin: auto;
-  display: block;
-  height: 1000px;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  z-index: -4;
+  animation: mymove 70s infinite linear;
 }
