@@ -86,6 +86,8 @@ time, mark, audio, video {
   border: none;
   margin-top: 15px;
   mix-blend-mode: screen;
+  width: 200px;
+  transition: ease-out 0.3s;
   cursor: pointer;
 }
 
@@ -99,6 +101,22 @@ time, mark, audio, video {
   border-radius: 50px;
   content: "";
   mix-blend-mode: color-burn;
+  transition: 0.2s all ease;
+}
+
+.tools-container button:hover {
+  border-radius: 50px;
+  color: white;
+  background-color: darkorange;
+  mix-blend-mode: normal;
+  opacity: 1;
+}
+
+.tools-container button:hover:before {
+  transition: 0.3s all ease;
+  left: 50%;
+  right: 50%;
+  z-index: -1;
 }
 
 .ingredients-container {
@@ -123,6 +141,8 @@ time, mark, audio, video {
   border: none;
   margin-top: 15px;
   mix-blend-mode: screen;
+  width: 270px;
+  transition: ease-out 0.3s;
   cursor: pointer;
 }
 
@@ -136,6 +156,22 @@ time, mark, audio, video {
   border-radius: 50px;
   content: "";
   mix-blend-mode: color-burn;
+  transition: 0.2s all ease;
+}
+
+.ingredients-container button:hover {
+  border-radius: 50px;
+  color: white;
+  background-color: mediumturquoise;
+  mix-blend-mode: normal;
+  opacity: 1;
+}
+
+.ingredients-container button:hover:before {
+  transition: 0.3s all ease;
+  left: 50%;
+  right: 50%;
+  z-index: -1;
 }
 
 .info-container {
