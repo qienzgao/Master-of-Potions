@@ -2,23 +2,34 @@
 import Tool from "./scripts/tool"
 import Ingredient from "./scripts/ingredient"
 import Canvas from "./scripts/canvas"
+// import Display from "./scripts/display"
 
 let tool = new Tool(); 
 let ingredient = new Ingredient(); 
 let newCanvas = new Canvas
 let potion = null; 
-// const current_rotation = 0; 
 
-//background rotation:
-// document.querySelector("#sign1").addEventListener('click', function () {
-//     current_rotation += 90;
-//     document.querySelector("#sign1").style.transform = `rotate(' + current_rotation + 'deg)`;
-// });
+//display:
+let showlist = document.querySelectorAll('.show img');
+function show(id) {
+    let showimg = document.querySelector(id)
+    showimg.style.display = 'block';
+};
+
+function unshow(){
+    for (let i = 0; i < showlist.length; i++) {
+        showlist[i].style.display = 'none';
+        // console.log(showlist[i]);
+    }
+}
+
 
 //ingredient-tool interaction:
 
 document.getElementById('flower').addEventListener('click', ()=>{
     ingredient.setSelected('flower'); 
+    unshow(); 
+    show('#flowerimg'); 
     newCanvas.write(ingredient.selected);  
 })
 
@@ -28,6 +39,8 @@ document.getElementById('feather').addEventListener('click', ()=>{
 
 document.getElementById('heart').addEventListener('click', () => {
     ingredient.setSelected('heart');
+    unshow(); 
+    show('#heartimg'); 
     newCanvas.write(ingredient.selected); 
 })
 
@@ -37,6 +50,8 @@ document.getElementById('knife').addEventListener('click', () => {
 
 document.getElementById('dark-room').addEventListener('click', () => {
     ingredient.setSelected('darkRoom');
+    unshow(); 
+    show('#dark-roomimg'); 
     newCanvas.write(ingredient.selected); 
 })
 
@@ -46,6 +61,8 @@ document.getElementById('laser-pointer').addEventListener('click', () => {
 
 document.getElementById('dragon').addEventListener('click', () => {
     ingredient.setSelected('dragon');
+    unshow(); 
+    show('#dragonimg'); 
     newCanvas.write(ingredient.selected); 
 })
 
@@ -55,6 +72,8 @@ document.getElementById('dragon-fruit').addEventListener('click', () => {
 
 document.getElementById('nothings').addEventListener('click', () => {
     ingredient.setSelected('nothings');
+    unshow(); 
+    show('#nothingsimg'); 
     newCanvas.write(ingredient.selected); 
 })
 
@@ -64,6 +83,8 @@ document.getElementById('sugar').addEventListener('click', () => {
 
 document.getElementById('eyes').addEventListener('click', () => {
     ingredient.setSelected('eyes');
+    unshow(); 
+    show('#eyesimg'); 
     newCanvas.write(ingredient.selected); 
 })
 
@@ -73,6 +94,8 @@ document.getElementById('fanged-mouth').addEventListener('click', () => {
 
 document.getElementById('mask').addEventListener('click', () => {
     ingredient.setSelected('mask');
+    unshow(); 
+    show('#maskimg'); 
     newCanvas.write(ingredient.selected); 
 })
 
@@ -82,6 +105,8 @@ document.getElementById('mini-heart').addEventListener('click', () => {
 
 document.getElementById('locked-box').addEventListener('click', () => {
     ingredient.setSelected('lockedBox');
+    unshow(); 
+    show('#locked-boximg'); 
     newCanvas.write(ingredient.selected); 
 })
 
@@ -91,24 +116,41 @@ document.getElementById('key').addEventListener('click', () => {
 //manipulations:
 
 document.getElementById('burn').addEventListener('click', ()=>{
-    newCanvas.write(`This ingredient is burt!`)
-    ingredient.selected = null; 
-    tool.created = null; 
-    ingredient.materials.pop(); 
     ingredient.materials.forEach(material=>{
         newCanvas.write(material); 
     }); 
+    show('#burnvisual'); 
+    setTimeout(()=>{
+        newCanvas.write(`This ingredient is burt!`)
+        unshow();
+        show(null);
+    }, 2010);
+    ingredient.selected = null; 
+    tool.created = null; 
+    ingredient.materials.pop(); 
 })
 
 document.getElementById('extract').addEventListener('click', () => {
     ingredient.addIngredient(tool.created); 
+    show('#extractvisual');
+    setTimeout(() => {
+        newCanvas.write('You extract the essence from the ingredient!')
+        unshow();
+        show(null);
+    }, 2010);
     newCanvas.write(ingredient.materials);
     ingredient.selected = null;
     tool.created = null; 
 })
 
 document.getElementById('brew').addEventListener('click', () => {
-    potion = newCanvas.write(ingredient.brew()); 
+    show('#brewvisual');
+    setTimeout(() => {
+        unshow();
+        potion = newCanvas.write(ingredient.brew()); 
+        show(null);
+    }, 2010);
+    potion; 
     tool = new Tool();
     ingredient = new Ingredient(); 
 })
@@ -116,8 +158,18 @@ document.getElementById('brew').addEventListener('click', () => {
 document.getElementById('redo').addEventListener('click', () => {
     tool = new Tool();
     ingredient = new Ingredient(); 
-    newCanvas.write('Your pot is empty now.')
+    show('#redovisual');
+    setTimeout(() => {
+        newCanvas.write('Your pot is empty now.')
+        unshow();
+        show(null);
+    }, 2010);
 })
+
+
+// let image = new Image(); 
+// image.src = "./images/heart.png";
+// newCanvas.draw(image);
 
 
 

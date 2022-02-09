@@ -1,0 +1,69 @@
+
+  .show {
+    padding: 0;
+    margin: auto;
+    // visibility: visible;
+    display: block;
+    background-color: transparent;
+    position: absolute;
+    top: -10%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  .show img {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    display: none;
+    padding: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  @keyframes manipulate {
+    50% {transform: scale(1.3, 1.2)}
+    100% {transform: scale(0, 0)}
+  }
+
+  @keyframes redo {
+    50% {transform: scale(1.3, 1.3) rotate(180deg)} 
+    100% {transform: scale(0, 0) rotate(359deg)}
+  }
+
+  #burnvisual {
+      width: 300px;
+      opacity: 0.6;
+      
+      animation: 2s ease 0.3s manipulate;
+  }
+
+  #extractvisual {
+      opacity: 0.6;
+      animation: 2s ease 0.3s manipulate;
+  }
+
+  #redovisual {
+      opacity: 0.8;
+      animation: 2s ease 0.3s redo;
+  }
+
+  #brewvisual {
+      opacity: 0.6;
+      animation: 2s ease 0.3s manipulate; 
+  }
+
+  #heartimg {
+    animation: 1.5s ease 0s infinite beat;
+  }
+
+  @keyframes beat {
+    0%, 50%, 100% {transform: scale(1, 1)}
+    30%, 80% {transform:scale(0.9, 0.9)}
+  }

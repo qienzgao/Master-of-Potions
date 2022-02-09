@@ -32,28 +32,13 @@ time, mark, audio, video {
   padding: 20px;
 }
 
-#game-canvas {
+#text-canvas {
   padding: 0;
   margin: auto;
   display: block;
   background-color: transparent;
   position: absolute;
-  top: -10%;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -2;
-}
-
-#text-canvas {
-  opacity: 0.7;
-  border-radius: 50px;
-  padding: 0;
-  margin: auto;
-  display: block;
-  background-color: white;
-  position: absolute;
-  bottom: 20%;
+  bottom: 15%;
   left: 0;
   right: 0;
   z-index: -1;
@@ -64,8 +49,8 @@ time, mark, audio, video {
   text-align: center;
   margin: auto;
   width: 100%;
-  padding: 10px;
-  bottom: 3%;
+  padding: 7px;
+  bottom: 2%;
 }
 
 .controller-container button {
@@ -88,24 +73,24 @@ time, mark, audio, video {
 }
 
 @keyframes shake {
-  50% {
+  0% {
     transform: rotate(0deg) translate3d(0, 0, 0);
     transform-origin: bottom;
   }
   20% {
-    transform: rotate(8deg) translate3d(0, 0, 0);
+    transform: rotate(10deg) translate3d(0, 0, 0);
     transform-origin: bottom;
   }
   40% {
-    transform: rotate(-8deg) translate3d(0, 0, 0);
+    transform: rotate(-10deg) translate3d(0, 0, 0);
     transform-origin: bottom;
   }
   60% {
-    transform: rotate(4deg) translate3d(0, 0, 0);
+    transform: rotate(6deg) translate3d(0, 0, 0);
     transform-origin: bottom;
   }
   80% {
-    transform: rotate(-2deg) translate3d(0, 0, 0);
+    transform: rotate(-4deg) translate3d(0, 0, 0);
     transform-origin: bottom;
   }
   100% {
@@ -121,7 +106,7 @@ time, mark, audio, video {
   display: flex;
   float: right;
   flex-direction: column;
-  padding: 5%;
+  padding: 3%;
 }
 
 .tools-container button {
@@ -256,6 +241,14 @@ body {
     transform: rotate(359deg);
   }
 }
+@keyframes rerotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(1deg);
+  }
+}
 #text-box {
   opacity: 0.7;
   padding: 0;
@@ -270,11 +263,11 @@ body {
 }
 
 #sign1 {
-  opacity: 0.8;
+  opacity: 0.7;
   padding: 0;
   margin: auto;
   display: block;
-  height: 500px;
+  height: 470px;
   position: fixed;
   top: 0;
   bottom: 12%;
@@ -285,7 +278,7 @@ body {
 }
 
 #sign2 {
-  opacity: 0.5;
+  opacity: 0.3;
   padding: 0;
   margin: auto;
   display: block;
@@ -294,11 +287,11 @@ body {
   top: -35%;
   left: -15%;
   z-index: -5;
-  animation: mymove 100s infinite linear;
+  animation: rerotate 100s infinite linear;
 }
 
 #sign3 {
-  opacity: 0.8;
+  opacity: 0.5;
   padding: 0;
   margin: auto;
   display: block;
@@ -311,6 +304,7 @@ body {
 }
 
 #sign4 {
+  opacity: 0.7;
   padding: 0;
   margin: auto;
   display: block;
@@ -320,4 +314,81 @@ body {
   left: 50%;
   z-index: -7;
   animation: mymove 70s infinite linear;
+}
+
+.show {
+  padding: 0;
+  margin: auto;
+  display: block;
+  background-color: transparent;
+  position: absolute;
+  top: -10%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.show img {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  display: none;
+  padding: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@keyframes manipulate {
+  50% {
+    transform: scale(1.3, 1.2);
+  }
+  100% {
+    transform: scale(0, 0);
+  }
+}
+@keyframes redo {
+  50% {
+    transform: scale(1.3, 1.3) rotate(180deg);
+  }
+  100% {
+    transform: scale(0, 0) rotate(359deg);
+  }
+}
+#burnvisual {
+  width: 300px;
+  opacity: 0.6;
+  animation: 2s ease 0.3s manipulate;
+}
+
+#extractvisual {
+  opacity: 0.6;
+  animation: 2s ease 0.3s manipulate;
+}
+
+#redovisual {
+  opacity: 0.8;
+  animation: 2s ease 0.3s redo;
+}
+
+#brewvisual {
+  opacity: 0.6;
+  animation: 2s ease 0.3s manipulate;
+}
+
+#heartimg {
+  animation: 1.5s ease 0s infinite beat;
+}
+
+@keyframes beat {
+  0%, 50%, 100% {
+    transform: scale(1, 1);
+  }
+  30%, 80% {
+    transform: scale(0.9, 0.9);
+  }
 }

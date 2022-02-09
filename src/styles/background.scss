@@ -12,6 +12,16 @@ body {
     transform: rotate(359deg);
   }
 }
+
+@keyframes rerotate {
+    from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(1deg);
+  }
+}
+
   #text-box {
     opacity: 0.7;
     padding: 0;
@@ -27,11 +37,11 @@ body {
   }
 
 #sign1 {
-    opacity: 0.8;
+    opacity: 0.7;
     padding: 0;
     margin: auto;
     display: block;
-    height: 500px;
+    height: 470px;
     position: fixed;
     top: 0;
     bottom: 12%;
@@ -43,7 +53,7 @@ body {
 
 
 #sign2 {
-    opacity: 0.5;
+    opacity: 0.3;
     padding: 0;
     margin: auto;
     display: block;
@@ -52,10 +62,10 @@ body {
     top: -35%;
     left: -15%;
     z-index: -5;
-    animation: mymove 100s infinite linear
+    animation: rerotate 100s infinite linear
 }
 #sign3 {
-    opacity: 0.8;
+    opacity: 0.5;
     padding: 0;
     margin: auto;
     display: block;
@@ -68,6 +78,7 @@ body {
 }
 
 #sign4 {
+    opacity: 0.7;
     padding: 0;
     margin: auto;
     display: block;
