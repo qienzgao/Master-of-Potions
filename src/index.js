@@ -32,7 +32,7 @@ document.getElementById('heart').addEventListener('click', () => {
 })
 
 document.getElementById('knife').addEventListener('click', () => {
-    tool.selectedTool('knife', ingredient);
+    newCanvas.write(tool.selectedTool('knife', ingredient));
 })
 
 document.getElementById('dark-room').addEventListener('click', () => {
@@ -41,7 +41,7 @@ document.getElementById('dark-room').addEventListener('click', () => {
 })
 
 document.getElementById('laser-pointer').addEventListener('click', () => {
-    tool.selectedTool('laserPointer', ingredient);
+    newCanvas.write(tool.selectedTool('laserPointer', ingredient));
 })
 
 document.getElementById('dragon').addEventListener('click', () => {
@@ -49,8 +49,8 @@ document.getElementById('dragon').addEventListener('click', () => {
     newCanvas.write(ingredient.selected); 
 })
 
-document.getElementById('sugar').addEventListener('click', () => {
-    tool.selectedTool('sugar', ingredient);
+document.getElementById('dragon-fruit').addEventListener('click', () => {
+    newCanvas.write(tool.selectedTool('dragonFruit', ingredient));
 })
 
 document.getElementById('nothings').addEventListener('click', () => {
@@ -58,8 +58,8 @@ document.getElementById('nothings').addEventListener('click', () => {
     newCanvas.write(ingredient.selected); 
 })
 
-document.getElementById('dragon-fruit').addEventListener('click', () => {
-    tool.selectedTool('dragonFruit', ingredient);
+document.getElementById('sugar').addEventListener('click', () => {
+    newCanvas.write(tool.selectedTool('sugar', ingredient));
 })
 
 document.getElementById('eyes').addEventListener('click', () => {
@@ -68,7 +68,7 @@ document.getElementById('eyes').addEventListener('click', () => {
 })
 
 document.getElementById('fanged-mouth').addEventListener('click', () => {
-    tool.selectedTool('fangedMouth', ingredient);
+    newCanvas.write(tool.selectedTool('fangedMouth', ingredient));
 })
 
 document.getElementById('mask').addEventListener('click', () => {
@@ -77,7 +77,7 @@ document.getElementById('mask').addEventListener('click', () => {
 })
 
 document.getElementById('mini-heart').addEventListener('click', () => {
-    tool.selectedTool('miniHeart', ingredient);
+    newCanvas.write(tool.selectedTool('miniHeart', ingredient));
 })
 
 document.getElementById('locked-box').addEventListener('click', () => {
@@ -86,7 +86,7 @@ document.getElementById('locked-box').addEventListener('click', () => {
 })
 
 document.getElementById('key').addEventListener('click', () => {
-    tool.selectedTool('key', ingredient);
+    newCanvas.write(tool.selectedTool('key', ingredient));
 })
 //manipulations:
 
@@ -102,9 +102,7 @@ document.getElementById('burn').addEventListener('click', ()=>{
 
 document.getElementById('extract').addEventListener('click', () => {
     ingredient.addIngredient(tool.created); 
-    ingredient.materials.forEach(material => {
-        newCanvas.write(material);
-    }); 
+    newCanvas.write(ingredient.materials);
     ingredient.selected = null;
     tool.created = null; 
 })

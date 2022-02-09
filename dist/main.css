@@ -42,6 +42,20 @@ time, mark, audio, video {
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: -2;
+}
+
+#text-canvas {
+  opacity: 0.7;
+  border-radius: 50px;
+  padding: 0;
+  margin: auto;
+  display: block;
+  background-color: white;
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  right: 0;
   z-index: -1;
 }
 
@@ -242,6 +256,19 @@ body {
     transform: rotate(359deg);
   }
 }
+#text-box {
+  opacity: 0.7;
+  padding: 0;
+  margin: auto;
+  display: block;
+  background-color: transparent;
+  position: absolute;
+  bottom: 17%;
+  left: 0;
+  right: 3%;
+  z-index: -3;
+}
+
 #sign1 {
   opacity: 0.8;
   padding: 0;
@@ -253,7 +280,7 @@ body {
   bottom: 12%;
   left: 0;
   right: 0;
-  z-index: -2;
+  z-index: -4;
   animation: mymove 20s infinite linear;
 }
 
@@ -266,7 +293,7 @@ body {
   position: fixed;
   top: -35%;
   left: -15%;
-  z-index: -3;
+  z-index: -5;
   animation: mymove 100s infinite linear;
 }
 
@@ -279,7 +306,7 @@ body {
   position: fixed;
   top: 50%;
   right: 0;
-  z-index: -4;
+  z-index: -6;
   animation: mymove 60s infinite linear;
 }
 
@@ -291,6 +318,6 @@ body {
   position: fixed;
   top: -20%;
   left: 50%;
-  z-index: -5;
+  z-index: -7;
   animation: mymove 70s infinite linear;
 }

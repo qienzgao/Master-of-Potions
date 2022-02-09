@@ -6,21 +6,21 @@
 
 class Canvas {
     constructor() {
-        this.canvas = document.getElementById('game-canvas'); 
+        this.canvas = document.getElementById('text-canvas'); 
         this.ctx = this.canvas.getContext('2d'); 
-        this.CANVAS_WIDTH = this.canvas.width = 500; 
-        this.CANVAS_HEIGHT = this.canvas.height = 500;  
+        this.CANVAS_WIDTH = this.canvas.width = 900; 
+        this.CANVAS_HEIGHT = this.canvas.height = 100;  
     }
     
     write(output) {
         this.ctx.clearRect(0, 0, this.CANVAS_WIDTH, this.CANVAS_HEIGHT); 
-        this.ctx.font = '30px serif';
-        this.ctx.textAlign = 'start';
-        this.ctx.fillText(output, 250, 250);
+        this.ctx.font = '25px Luminari, fantasy';
+        this.ctx.fillStyle = 'black'
+        this.ctx.textAlign = 'center';
+        this.ctx.fillText(output, 450, 60);
     }
     
 }
-
 export default Canvas; 
 
 

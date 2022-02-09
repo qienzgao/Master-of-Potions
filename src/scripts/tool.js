@@ -65,7 +65,7 @@ class Tool {
             this.created = 'dragonSaliva';
             return `${this.created} is created! Extract it if you'd like to add it to your pot.`;
         } else {
-            return `You can't feed a ${ingredient.selected}!`;
+            return `You can't use it like that!`;
         }
     }
 
