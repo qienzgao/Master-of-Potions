@@ -1,6 +1,7 @@
 // import button from "./scripts/background"
 import Tool from "./scripts/tool"
 import Ingredient from "./scripts/ingredient"
+import animate from "./scripts/animation"
 
 let tool = new Tool(); 
 let ingredient = new Ingredient(); 
@@ -114,6 +115,23 @@ document.getElementById('redo').addEventListener('click', () => {
     ingredient = new Ingredient(); 
     console.log('Your pot is empty now.')
 })
+
+//remember to delete !!!
+
+// const canvas = document.getElementById('game-canvas');
+// const ctx = canvas.getContext('2d');
+// const CANVAS_WIDTH = canvas.width = 500;
+// const CANVAS_HEIGHT = canvas.height = 500;
+
+// const brewImage = new Image();
+// brewImage.src = 'sprites/brew.png';
+
+// function animate() {
+//     ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+//     ctx.fillRect(50, 50, 100, 100);
+//     requestAnimationFrame(animate);
+// }; 
+
 
 
 
