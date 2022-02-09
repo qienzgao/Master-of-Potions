@@ -68,6 +68,11 @@ time, mark, audio, video {
   opacity: 0.8;
 }
 
+.controller-container img:hover {
+  opacity: 1;
+  animation: shake 1s ease-in-out both;
+}
+
 @keyframes shake {
   50% {
     transform: rotate(0deg) translate3d(0, 0, 0);
@@ -94,11 +99,6 @@ time, mark, audio, video {
     transform-origin: bottom;
   }
 }
-.controller-container img:hover {
-  opacity: 1;
-  animation: shake 1s ease-in-out both;
-}
-
 .tools-container {
   color: lightblue;
   font-family: Luminari, fantasy;
@@ -291,6 +291,6 @@ body {
   position: fixed;
   top: -20%;
   left: 50%;
-  z-index: -4;
+  z-index: -5;
   animation: mymove 70s infinite linear;
 }

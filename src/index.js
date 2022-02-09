@@ -1,10 +1,11 @@
 // import button from "./scripts/background"
 import Tool from "./scripts/tool"
 import Ingredient from "./scripts/ingredient"
-import animate from "./scripts/animation"
+import Canvas from "./scripts/canvas"
 
 let tool = new Tool(); 
 let ingredient = new Ingredient(); 
+let newCanvas = new Canvas
 let potion = null; 
 // const current_rotation = 0; 
 
@@ -18,16 +19,16 @@ let potion = null;
 
 document.getElementById('flower').addEventListener('click', ()=>{
     ingredient.setSelected('flower'); 
-    console.log(ingredient.selected); 
+    newCanvas.write(ingredient.selected);  
 })
 
 document.getElementById('feather').addEventListener('click', ()=>{
-    tool.selectedTool('feather', ingredient);
+    newCanvas.write(tool.selectedTool('feather', ingredient));
 })
 
 document.getElementById('heart').addEventListener('click', () => {
     ingredient.setSelected('heart');
-    console.log(ingredient.selected);
+    newCanvas.write(ingredient.selected); 
 })
 
 document.getElementById('knife').addEventListener('click', () => {
@@ -36,7 +37,7 @@ document.getElementById('knife').addEventListener('click', () => {
 
 document.getElementById('dark-room').addEventListener('click', () => {
     ingredient.setSelected('darkRoom');
-    console.log(ingredient.selected);
+    newCanvas.write(ingredient.selected); 
 })
 
 document.getElementById('laser-pointer').addEventListener('click', () => {
@@ -45,7 +46,7 @@ document.getElementById('laser-pointer').addEventListener('click', () => {
 
 document.getElementById('dragon').addEventListener('click', () => {
     ingredient.setSelected('dragon');
-    console.log(ingredient.selected);
+    newCanvas.write(ingredient.selected); 
 })
 
 document.getElementById('sugar').addEventListener('click', () => {
@@ -54,7 +55,7 @@ document.getElementById('sugar').addEventListener('click', () => {
 
 document.getElementById('nothings').addEventListener('click', () => {
     ingredient.setSelected('nothings');
-    console.log(ingredient.selected);
+    newCanvas.write(ingredient.selected); 
 })
 
 document.getElementById('dragon-fruit').addEventListener('click', () => {
@@ -63,7 +64,7 @@ document.getElementById('dragon-fruit').addEventListener('click', () => {
 
 document.getElementById('eyes').addEventListener('click', () => {
     ingredient.setSelected('eyes');
-    console.log(ingredient.selected);
+    newCanvas.write(ingredient.selected); 
 })
 
 document.getElementById('fanged-mouth').addEventListener('click', () => {
@@ -72,7 +73,7 @@ document.getElementById('fanged-mouth').addEventListener('click', () => {
 
 document.getElementById('mask').addEventListener('click', () => {
     ingredient.setSelected('mask');
-    console.log(ingredient.selected);
+    newCanvas.write(ingredient.selected); 
 })
 
 document.getElementById('mini-heart').addEventListener('click', () => {
@@ -81,7 +82,7 @@ document.getElementById('mini-heart').addEventListener('click', () => {
 
 document.getElementById('locked-box').addEventListener('click', () => {
     ingredient.setSelected('lockedBox');
-    console.log(ingredient.selected);
+    newCanvas.write(ingredient.selected); 
 })
 
 document.getElementById('key').addEventListener('click', () => {
@@ -90,22 +91,26 @@ document.getElementById('key').addEventListener('click', () => {
 //manipulations:
 
 document.getElementById('burn').addEventListener('click', ()=>{
-    console.log(`This ingredient is burt!`)
+    newCanvas.write(`This ingredient is burt!`)
     ingredient.selected = null; 
     tool.created = null; 
     ingredient.materials.pop(); 
-    console.log(ingredient.materials); 
+    ingredient.materials.forEach(material=>{
+        newCanvas.write(material); 
+    }); 
 })
 
 document.getElementById('extract').addEventListener('click', () => {
     ingredient.addIngredient(tool.created); 
-    console.log(ingredient.materials)
+    ingredient.materials.forEach(material => {
+        newCanvas.write(material);
+    }); 
     ingredient.selected = null;
     tool.created = null; 
 })
 
 document.getElementById('brew').addEventListener('click', () => {
-    potion = console.log(ingredient.brew()); 
+    potion = newCanvas.write(ingredient.brew()); 
     tool = new Tool();
     ingredient = new Ingredient(); 
 })
@@ -113,24 +118,8 @@ document.getElementById('brew').addEventListener('click', () => {
 document.getElementById('redo').addEventListener('click', () => {
     tool = new Tool();
     ingredient = new Ingredient(); 
-    console.log('Your pot is empty now.')
+    newCanvas.write('Your pot is empty now.')
 })
-
-//remember to delete !!!
-
-// const canvas = document.getElementById('game-canvas');
-// const ctx = canvas.getContext('2d');
-// const CANVAS_WIDTH = canvas.width = 500;
-// const CANVAS_HEIGHT = canvas.height = 500;
-
-// const brewImage = new Image();
-// brewImage.src = 'sprites/brew.png';
-
-// function animate() {
-//     ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-//     ctx.fillRect(50, 50, 100, 100);
-//     requestAnimationFrame(animate);
-// }; 
 
 
 

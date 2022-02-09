@@ -67,6 +67,11 @@ time, mark, audio, video {
     opacity: 0.8;
   }
   
+  .controller-container img:hover {
+    opacity: 1;
+    animation: shake 1s ease-in-out both;
+  }  
+
   @keyframes shake {
     50% {transform: rotate(0deg) translate3d(0, 0, 0); transform-origin: bottom }
     20% {transform: rotate(8deg) translate3d(0, 0, 0); transform-origin: bottom }
@@ -76,10 +81,6 @@ time, mark, audio, video {
     100% {transform: rotate(0deg) translate3d(0, 0, 0); transform-origin: bottom }
   }
   
-  .controller-container img:hover {
-    opacity: 1;
-    animation: shake 1s ease-in-out both;
-  }  
 
 
 .tools-container {
