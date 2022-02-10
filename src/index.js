@@ -56,7 +56,10 @@ document.getElementById('dark-room').addEventListener('click', () => {
 })
 
 document.getElementById('laser-pointer').addEventListener('click', () => {
-    newCanvas.write(tool.selectedTool('laserPointer', ingredient));
+    setTimeout(() => {
+        show('#catimg')
+        newCanvas.write(tool.selectedTool('laserPointer', ingredient));
+    }, 2222);
 })
 
 document.getElementById('dragon').addEventListener('click', () => {

@@ -27,11 +27,11 @@ class Ingredient {
             this.materials.includes('Sweet nothings') &&
             this.materials.length === 3){
             return 'Heartless Potion'
-        } else if (this.materials.includes(' eart') &&
-            this.materials.includes('frozenTears') &&
-            this.materials.includes('sweetNothings') &&
+        } else if (this.materials.includes('Happy face') &&
+            this.materials.includes('Fragment of a nightmare') &&
+            this.materials.includes('Laughing flower') &&
             this.materials.length === 3) {
-            return 
+            return 'Love Potion'
         }
         else {
             return `You've made something strange...(definitely not a potion!)`
