@@ -113,6 +113,19 @@ document.getElementById('locked-box').addEventListener('click', () => {
 document.getElementById('key').addEventListener('click', () => {
     newCanvas.write(tool.selectedTool('key', ingredient));
 })
+
+document.getElementById('dream').addEventListener('click', () => {
+    ingredient.setSelected('Nightmare');
+    unshow();
+    show('#dreamimg')
+    newCanvas.write('Hover over the nightmare to spin it!')
+    setTimeout(() => {
+        newCanvas.write(`Fragment of a nightmare is created! Extract it if you'd like to add it to your pot`)
+    }, 3333);
+    tool.created = 'Fragment of a nightmare'; 
+})
+
+
 //manipulations:
 
 document.getElementById('burn').addEventListener('click', ()=>{

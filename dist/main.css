@@ -528,3 +528,60 @@ body {
     transform: translate(-10%, 0%) rotate(0deg);
   }
 }
+#nothingsimg {
+  width: 200px;
+  height: 200px;
+  animation: bounce ease-in-out 20s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(-100%, 0%) rotate(360deg);
+  }
+  25% {
+    transform: translate(150%, -100%) rotate(360deg);
+  }
+  50% {
+    transform: translate(-100%, 100%) rotate(360deg);
+  }
+  75% {
+    transform: translate(100%, 200%) rotate(360deg);
+  }
+  100% {
+    transform: translate(-100%, 0%) rotate(360deg);
+  }
+}
+#dreamimg {
+  animation: rerotate 1s infinite linear;
+}
+
+#dreamimg:hover {
+  animation: rolling ease-in-out 1s infinite;
+}
+
+@keyframes rolling {
+  0% {
+    transform: translate(0%, 0%) rotate(360deg);
+  }
+  14% {
+    transform: translate(20%, -15%) rotate(0deg);
+  }
+  29% {
+    transform: translate(-15%, 15%) rotate(-360deg);
+  }
+  44% {
+    transform: translate(15%, -20%) rotate(0deg);
+  }
+  58% {
+    transform: translate(-15%, 5%) rotate(360deg);
+  }
+  72% {
+    transform: translate(15%, 20%) rotate(0deg);
+  }
+  86% {
+    transform: translate(-15%, -5%) rotate(-360deg);
+  }
+  100% {
+    transform: translate(0%, 0%) rotate(0deg);
+  }
+}
