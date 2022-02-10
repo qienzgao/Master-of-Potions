@@ -161,8 +161,6 @@ document.getElementById('extract').addEventListener('click', () => {
 document.getElementById('brew').addEventListener('click', () => {
     show('#brewvisual');
     let potion = ingredient.brew(); 
-    console.log(potion); 
-    console.log(ingredient.materials)
     setTimeout(() => {
         unshow();
         newCanvas.write(potion); 
