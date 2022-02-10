@@ -384,6 +384,10 @@ body {
   animation: 1.5s ease 0s infinite beat;
 }
 
+#heartimg:hover {
+  animation: 1s ease 0s infinite fastbeat;
+}
+
 @keyframes beat {
   0%, 50%, 100% {
     transform: scale(1, 1);
@@ -392,3 +396,42 @@ body {
     transform: scale(0.9, 0.9);
   }
 }
+@keyframes fastbeat {
+  0%, 50%, 100% {
+    transform: scale(1.1, 1.1);
+  }
+  30%, 80% {
+    transform: scale(0.8, 0.8);
+  }
+}
+#flowerimg {
+  animation: sway 4s infinite both;
+}
+
+#flowerimg:hover {
+  animation: sway 1.3s infinite both;
+}
+
+@keyframes sway {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0) scale(0.9, 0.9);
+    transform-origin: bottom;
+  }
+  25% {
+    transform: rotate(-10deg) translate3d(0, 0, 0) scale(1.1, 1.1);
+    transform-origin: bottom;
+  }
+  50% {
+    transform: rotate(0deg) translate3d(0, 0, 0) scale(0.9, 0.9);
+    transform-origin: bottom;
+  }
+  75% {
+    transform: rotate(10deg) translate3d(0, 0, 0) scale(1.1, 1.1);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0) scale(0.9, 0.9);
+    transform-origin: bottom;
+  }
+}
+@keyframes shake {}
