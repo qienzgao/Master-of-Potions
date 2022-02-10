@@ -89,3 +89,88 @@ body {
     z-index: -7;
     animation: mymove 70s infinite linear
 }
+
+.popup {
+  position: fixed;
+  top: 45%; 
+  left: 50%; 
+  transform: translate(-50%, -50%) scale(0); 
+  transition: 200ms ease-in-out;
+  border: solid white;
+  border-radius: 50px;
+  z-index: 10;
+  background-color: rgba(80, 255, 130, 0.5);
+  width: 700px; 
+  max-width: 80%;
+}
+
+.popup.active {
+  transform: translate(-50%, -50%) scale(1); 
+}
+
+
+.popup-header {
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popup-header #popup-title {
+  color: white;
+  font-family: Luminari, fantasy;
+  font-size: 1.25rem;
+  font-weight: bolder;
+}
+
+.popup-header #close {
+  cursor: pointer; 
+  color: white;
+  border: none; 
+  outline: none; 
+  background: none;
+  font-size: 1.5rem; 
+  font-weight: bold;
+}
+
+.open{
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 30px;
+  right: 100px;  
+  background: none;
+  border: none;
+  animation: floating 5s infinite linear;
+}
+
+.open:hover {
+  opacity: 1; 
+  animation: fastbeat 3s infinite ease-in-out; 
+}
+
+#popup-body {
+  font-family: Luminari, fantasy;
+  font-size: 1.25rem;
+  color: white;
+  padding: 30px 30px;
+}
+
+#overlay {
+  position: fixed; 
+  opacity: 0;
+  top: 0; 
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(98, 100, 180, 0.4);
+  transition: 200ms ease-in-out;
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+

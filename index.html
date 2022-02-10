@@ -27,6 +27,7 @@
         <img src="/src/images/heart.png" id="heartimg">
         <img src="/src/images/dark.jpeg" id="dark-roomimg">
         <img src="/src/images/cat.webp" id="catimg">
+        <img src="/src/images/dragon2.png" id="dragonimg2">
         <img src="/src/images/dragon.png" id="dragonimg">
         <img src="/src/images/bubble.png" id="nothingsimg">
         <img src="/src/images/sign1.png" id="eyesimg">
@@ -55,34 +56,70 @@
 
     <div class="tools-container">
         <h2>TOOLS</h2>
-        <button id="fanged-mouth">Hurtful Words</button>
-        <button id="laser-pointer">Laser Pointer</button>
-        <button id="feather">Feather</button>
-        <button id="knife">Knife</button>
-        <button id="mini-heart">Mini Heart</button>
-        <button id="dragon-fruit">Dragon Fruit</button>
-        <button id="key">Key</button>
-        <button id="sugar">Sugar</button>
+            <button id="fanged-mouth">Hurtful Words</button>
+            <button id="laser-pointer">Laser Pointer</button>
+            <button id="feather">Feather</button>
+            <button id="knife">Knife</button>
+            <button id="mini-heart">Mini Heart</button>
+            <button id="dragon-fruit">Dragon Fruit</button>
+            <button id="key">Key</button>
+            <button id="sugar">Sugar</button>
     </div>
 
     <div class="ingredients-container">
         <h2>INGREDIENTS</h2>
-        <button id="mask">Mask</button>
-        <button id="dark-room">Dark Room</button>
-        <button id="heart">Heart</button>
-        <button id="dragon">A Very Evil(?) Dragon</button>
-        <button id="locked-box">Locked Box</button>
-        <button id="flower">Flower</button>
-        <button id="nothings">Nothings</button>
-        <button id="dream">Nightmare</button>
-        <button id="eyes">Eyes</button>
-        <button id="phantasy">Phantasy</button>
-    </ul>
+            <button id="mask">Mask</button>
+            <button id="dark-room">Dark Room</button>
+            <button id="heart">Heart</button>
+            <button id="dragon">A Very Evil(?) Dragon</button>
+            <button id="locked-box">Locked Box</button>
+            <button id="flower">Flower</button>
+            <button id="nothings">Nothings</button>
+            <button id="dream">Nightmare</button>
+            <button id="eyes">Eyes</button>
+            <button id="phantasy">Phantasy</button>
+    </div>
 
     <div class="info-container">
         <a id="git" href="https://github.com/qienzgao"><img id="gitimg" src="src/images/github.png" alt="Github" width="40" height="40" /></a>
         <a id="linkedin" href="https://www.linkedin.com/in/qien-gao-1390071a7/"><img id="linkimg" src="src/images/linkedin.png" alt="Linkedin" width="38" height="38" /></a>
     </div>
+    
+    <button class="open" data-popup-target="#popup"><img src="/src/images/spellbook.png" width="90" height="90"></img></button>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <div id="popup-title">INTRODUCTION</div>
+            <button data-close-button id="close-button"></button>
+        </div>
+        <div id="popup-body"> 
+            
+            * Select from ingredients container the desired ingredients
+            <br>
+            * With an ingredient selected, choose a tool to process the ingredient
+            <br>
+            * For now, one tool can only process one ingredient
+            <br>
+            * You must process the ingredient to make a potion successfully
+            <br>
+            * Certain ingredient(s) doesn't need to be processed with a tool
+            <br>
+            * After an ingredient is processed successfully, you may extract<img src="/src/images/extract.png" width="30" height="30"></img> it
+            <br>
+            * If you're not satisfied with current ingredient, you may burn <img src="/src/images/burn.png" width="20" height="30"></img> it
+            <br>
+            * You can restart from the begining using restart button<img src="/src/images/redo.png" width="30" height="30"></img>
+            <br>
+            * You may hit brew<img src="/src/images/brew.png" width="30" height="30"></img> anytime to generate the potion, but remember: most
+            of potions are combined with three processed ingredients!
+            <br>
+            * Here's a recipe of [Cutification Potion] for you to test out: 
+            <br>
+            [Cutification Potion] = 1[Dragon saliva] + 1[Cat attention]
+            <br>
+            
+        </div>
+    </div>
+    <div id="overlay"></div>
     <script src="./dist/main.js"></script>
 </body>
 

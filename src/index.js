@@ -66,6 +66,7 @@ document.getElementById('dragon').addEventListener('click', () => {
     ingredient.setSelected('Dragon');
     unshow(); 
     show('#dragonimg'); 
+    show('#dragonimg2');
     newCanvas.write(ingredient.selected); 
 })
 
@@ -186,12 +187,45 @@ document.getElementById('redo').addEventListener('click', () => {
     }, 2010);
 })
 
+//popups
 
-// let image = new Image(); 
-// image.src = "./images/heart.png";
-// newCanvas.draw(image);
+const openPopupButton = document.querySelectorAll('[data-popup-target]');
+const closePopupButton = document.querySelectorAll('[data-close-button]');
+const overlay = document.getElementById('overlay');
+
+openPopupButton.forEach(button => {
+    button.addEventListener('click', () => {
+        const popup = document.querySelector(button.dataset.popupTarget); 
+        openPopup(popup); 
+    })
+})
+
+overlay.addEventListener('click', ()=>{
+    const popups = document.querySelectorAll('.popup.active')
+    popups.forEach(popup =>{
+        closePopup(popup); 
+    })
+})
+
+closePopupButton.forEach(button => {
+    button.addEventListener('click', () => {
+        const popup = button.closest('.popup'); 
+        closePopup(popup);
+    })
+})
 
 
+function openPopup(popup){
+    if (popup == null ) return; 
+    popup.classList.add('active'); 
+    overlay.classList.add('active'); 
+}
+
+function closePopup(popup) {
+    if (popup == null) return; 
+    popup.classList.remove('active');
+    overlay.classList.remove('active'); 
+}
 
 
 

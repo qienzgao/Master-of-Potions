@@ -22,7 +22,7 @@ time, mark, audio, video {
 #title {
   color: lightblue;
   font-family: Luminari, fantasy;
-  font-size: xx-large;
+  font-size: 2.5rem;
   text-align: center;
   margin: auto;
   width: 50%;
@@ -190,8 +190,9 @@ time, mark, audio, video {
     }
 
 .info-container {
-  position: fixed; 
+  position: absolute; 
   bottom: 30px;
+  left: 50px;
   margin: auto;
   padding: 10px;
 }

@@ -32,8 +32,11 @@ class Ingredient {
             this.materials.includes('Laughing flower') &&
             this.materials.length === 3) {
             return 'Love Potion'
-        }
-        else {
+        } else if (this.materials.includes('Dragon saliva') &&
+            this.materials.includes('Cat attention') &&
+            this.materials.length === 2) {
+            return 'Cutification Potion'
+        } else {
             return `You've made something strange...(definitely not a potion!)`
         }
     }
