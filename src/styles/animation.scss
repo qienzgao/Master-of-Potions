@@ -94,7 +94,59 @@
     100% {transform: rotate(0deg) translate3d(0, 0, 0) scale(0.9, 0.9); transform-origin: bottom }
   }
 
-  @keyframes shake {
-      
+  #locked-boximg {
+    animation: wobble 3s ease-in-out both infinite; 
   }
+
+  #locked-boximg:hover {
+      animation: fastwobble 1.5s ease-in-out both infinite; 
+  }
+
+  @keyframes wobble {
+    0% {transform: rotate(0deg) translate3d(0, 0, 0)}
+    20% {transform: rotate(7deg) translate3d(0, 0, 0)}
+    40% {transform: rotate(-7deg) translate3d(0, 0, 0)}
+    60% {transform: rotate(5deg) translate3d(0, 0, 0)}
+    80% {transform: rotate(-3deg) translate3d(0, 0, 0)}
+    100% {transform: rotate(0deg) translate3d(0, 0, 0)}
+  }
+
+  @keyframes fastwobble {
+    0% {transform: rotate(0deg) translate3d(0, 0, 0)}
+    20% {transform: rotate(15deg) translate3d(0, 0, 0)}
+    40% {transform: rotate(-15deg) translate3d(0, 0, 0)}
+    60% {transform: rotate(10deg) translate3d(0, 0, 0)}
+    80% {transform: rotate(-10deg) translate3d(0, 0, 0)}
+    100% {transform: rotate(0deg) translate3d(0, 0, 0)}
+  }
+  
+  #maskimg {
+      width: 350px;
+      height: 350px;
+      animation: floating ease-in-out 4s infinite; 
+    }
+  #maskimg:hover {
+    width: 350px;
+    height: 350px;
+    animation: rampage ease-in-out 2s infinite; 
+  }
+  
+    @keyframes floating {
+      0% {transform: translate(0%, 0%) rotate(360deg);}
+      25% {transform: translate(0%, 7%) rotate(360deg);}
+      50% {transform: translate(0%, 0%) rotate(360deg);}
+      75% {transform: translate(0%, 7%) rotate(360deg);}
+      100% {transform: translate(0%, 0%) rotate(360deg);}
+    }
+
+    @keyframes rampage {
+      0% {transform: translate(-10%, 0%) rotate(360deg);}
+      25% {transform: translate(15%, -10%) rotate(360deg);}
+      50% {transform: translate(-10%, 10%) rotate(360deg);}
+      75% {transform: translate(10%, 20%) rotate(360deg);}
+      100% {transform: translate(-10%, 0%) rotate(0deg);}
+    }
+    
+    
+
   
