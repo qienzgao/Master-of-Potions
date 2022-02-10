@@ -27,7 +27,7 @@ function unshow(){
 //ingredient-tool interaction:
 
 document.getElementById('flower').addEventListener('click', ()=>{
-    ingredient.setSelected('flower'); 
+    ingredient.setSelected('Flower'); 
     unshow(); 
     show('#flowerimg'); 
     newCanvas.write(ingredient.selected);  
@@ -38,7 +38,7 @@ document.getElementById('feather').addEventListener('click', ()=>{
 })
 
 document.getElementById('heart').addEventListener('click', () => {
-    ingredient.setSelected('heart');
+    ingredient.setSelected('Heart');
     unshow(); 
     show('#heartimg'); 
     newCanvas.write(ingredient.selected); 
@@ -49,7 +49,7 @@ document.getElementById('knife').addEventListener('click', () => {
 })
 
 document.getElementById('dark-room').addEventListener('click', () => {
-    ingredient.setSelected('darkRoom');
+    ingredient.setSelected('Dark room');
     unshow(); 
     show('#dark-roomimg'); 
     newCanvas.write(ingredient.selected); 
@@ -60,7 +60,7 @@ document.getElementById('laser-pointer').addEventListener('click', () => {
 })
 
 document.getElementById('dragon').addEventListener('click', () => {
-    ingredient.setSelected('dragon');
+    ingredient.setSelected('Dragon');
     unshow(); 
     show('#dragonimg'); 
     newCanvas.write(ingredient.selected); 
@@ -71,7 +71,7 @@ document.getElementById('dragon-fruit').addEventListener('click', () => {
 })
 
 document.getElementById('nothings').addEventListener('click', () => {
-    ingredient.setSelected('nothings');
+    ingredient.setSelected('Nothings');
     unshow(); 
     show('#nothingsimg'); 
     newCanvas.write(ingredient.selected); 
@@ -82,7 +82,7 @@ document.getElementById('sugar').addEventListener('click', () => {
 })
 
 document.getElementById('eyes').addEventListener('click', () => {
-    ingredient.setSelected('eyes');
+    ingredient.setSelected('Eyes');
     unshow(); 
     show('#eyesimg'); 
     newCanvas.write(ingredient.selected); 
@@ -93,7 +93,7 @@ document.getElementById('fanged-mouth').addEventListener('click', () => {
 })
 
 document.getElementById('mask').addEventListener('click', () => {
-    ingredient.setSelected('mask');
+    ingredient.setSelected('Mask');
     unshow(); 
     show('#maskimg'); 
     newCanvas.write(ingredient.selected); 
@@ -104,7 +104,7 @@ document.getElementById('mini-heart').addEventListener('click', () => {
 })
 
 document.getElementById('locked-box').addEventListener('click', () => {
-    ingredient.setSelected('lockedBox');
+    ingredient.setSelected('Locked box');
     unshow(); 
     show('#locked-boximg'); 
     newCanvas.write(ingredient.selected); 

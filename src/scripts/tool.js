@@ -25,8 +25,8 @@ class Tool {
     }
 
     tickle(ingredient){
-        if(ingredient.selected === 'flower') {
-            this.created = 'laughingFlower';
+        if(ingredient.selected === 'Flower') {
+            this.created = 'Laughing flower';
             return `${this.created} is created! Extract it if you'd like to add it to your pot.`;
         } else {
             return "Nothing happens...";
@@ -34,8 +34,8 @@ class Tool {
     }
 
     cut(ingredient){
-        if(ingredient.selected === 'heart') {
-            this.created = 'brokenHeart';
+        if(ingredient.selected === 'Heart') {
+            this.created = 'Broken heart';
             return `${this.created} is created! Extract it if you'd like to add it to your pot.`;
         } else {
             return 'Why cutting it?';
@@ -43,8 +43,8 @@ class Tool {
     }
 
     biubiubiu(ingredient){
-        if(ingredient.selected === 'darkRoom') {
-            this.created = 'catAttention';
+        if(ingredient.selected === 'Dark room') {
+            this.created = 'Cat attention';
             return `${this.created} is created! Extract it if you'd like to add it to your pot.`;
         } else {
             return 'Nothing happens...';
@@ -52,8 +52,8 @@ class Tool {
     }
 
     sweeten(ingredient) {
-        if (ingredient.selected === 'nothings') {
-            this.created = 'sweetNothings';
+        if (ingredient.selected === 'Nothings') {
+            this.created = 'Sweet nothings';
             return `${this.created} is created! Extract it if you'd like to add it to your pot.`;
         } else {
             return 'Nothing happens...';
@@ -61,8 +61,8 @@ class Tool {
     }
 
     feed(ingredient) {
-        if (ingredient.selected === 'dragon') {
-            this.created = 'dragonSaliva';
+        if (ingredient.selected === 'Dragon') {
+            this.created = 'Dragon saliva';
             return `${this.created} is created! Extract it if you'd like to add it to your pot.`;
         } else {
             return `You can't use it like that!`;
@@ -70,8 +70,8 @@ class Tool {
     }
 
     saySomethingHurtful(ingredient) {
-        if (ingredient.selected === 'eyes') {
-            this.created = 'frozenTears';
+        if (ingredient.selected === 'Eyes') {
+            this.created = 'Frozen tears';
             return `${this.created} is created! Extract it if you'd like to add it to your pot.`;
         } else {
             return 'Nothing happens...';
@@ -79,8 +79,8 @@ class Tool {
     }
 
     love(ingredient) {
-        if (ingredient.selected === 'mask') {
-            this.created = 'happyFace';
+        if (ingredient.selected === 'Mask') {
+            this.created = 'Happy face';
             return `${this.created} is created! Extract it if you'd like to add it to your pot.`;
         } else {
             return 'Nothing happens...';
@@ -88,10 +88,10 @@ class Tool {
     }
 
     secret(ingredient) {
-        if (ingredient.selected === 'lockedBox') {
+        if (ingredient.selected === 'Locked box') {
             let code = prompt("It seems that you need to enter a secret code to use the key", 'What will it be?')
             if (code === '1003') {
-                this.created = 'secretIngredient';
+                this.created = 'Secret ingredient';
                 return `${this.created} is created! Extract it if you'd like to add it to your pot.`;
             } else {
                 return `It's not working...`;

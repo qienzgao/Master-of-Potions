@@ -17,17 +17,17 @@ class Ingredient {
     }
 
     brew(){
-        if(this.materials.includes('laughingFlower') &&
-            this.materials.includes('catAttention') && 
-            this.materials.includes('dragonSaliva') &&
+        if(this.materials.includes('Laughing flower') &&
+            this.materials.includes('Cat attention') && 
+            this.materials.includes('Dragon saliva') &&
             this.materials.length === 3){
             return 'Laugh Potion'
-        } else if (this.materials.includes('brokenHeart') &&
-            this.materials.includes('frozenTears') &&
-            this.materials.includes('sweetNothings') &&
+        } else if (this.materials.includes('Broken heart') &&
+            this.materials.includes('Frozen tears') &&
+            this.materials.includes('Sweet nothings') &&
             this.materials.length === 3){
             return 'Heartless Potion'
-        } else if (this.materials.includes('brokenHeart') &&
+        } else if (this.materials.includes(' eart') &&
             this.materials.includes('frozenTears') &&
             this.materials.includes('sweetNothings') &&
             this.materials.length === 3) {
