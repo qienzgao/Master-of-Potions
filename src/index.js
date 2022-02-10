@@ -139,7 +139,6 @@ document.getElementById('burn').addEventListener('click', ()=>{
     setTimeout(()=>{
         newCanvas.write(`This ingredient is burt!`)
         unshow();
-        show(null);
     }, 2010);
     ingredient.selected = null; 
     tool.created = null; 
@@ -152,7 +151,6 @@ document.getElementById('extract').addEventListener('click', () => {
     setTimeout(() => {
         newCanvas.write('You extract the essence from the ingredient!')
         unshow();
-        show(null);
     }, 2010);
     newCanvas.write(ingredient.materials);
     ingredient.selected = null;
@@ -161,12 +159,19 @@ document.getElementById('extract').addEventListener('click', () => {
 
 document.getElementById('brew').addEventListener('click', () => {
     show('#brewvisual');
+    let potion = ingredient.brew(); 
+    console.log(potion); 
+    console.log(ingredient.materials)
     setTimeout(() => {
         unshow();
-        potion = newCanvas.write(ingredient.brew()); 
-        show(null);
+        newCanvas.write(potion); 
+        if (potion !== `You've made something strange...(definitely not a potion!)`) {
+            show('#potionvisual'); 
+        } else {
+            show('#failvisual'); 
+            show('#poisonvisual')
+        }
     }, 2010);
-    potion; 
     tool = new Tool();
     ingredient = new Ingredient(); 
 })
@@ -178,7 +183,6 @@ document.getElementById('redo').addEventListener('click', () => {
     setTimeout(() => {
         newCanvas.write('Your pot is empty now.')
         unshow();
-        show(null);
     }, 2010);
 })
 

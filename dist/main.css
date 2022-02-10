@@ -322,7 +322,7 @@ body {
   display: block;
   background-color: transparent;
   position: absolute;
-  top: -10%;
+  top: -12%;
   bottom: 0;
   left: 0;
   right: 0;
@@ -373,6 +373,7 @@ body {
 #redovisual {
   opacity: 0.8;
   animation: 2s ease 0.3s redo;
+  z-index: 1;
 }
 
 #brewvisual {
@@ -669,4 +670,25 @@ body {
   width: 600px;
   height: 350px;
   border-radius: 50px;
+}
+
+#failvisual {
+  animation: radiate 7s infinite ease-in-out 0.1s;
+}
+
+#poisonvisual {
+  width: 500;
+  height: 400;
+  animation: floating 10s infinite linear;
+}
+
+@keyframes radiate {
+  0% {
+    opacity: 1;
+    transform: scale(0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3, 3);
+  }
 }
