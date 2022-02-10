@@ -241,17 +241,17 @@
   animation: radiate 7s infinite ease-in-out 0.1s;
 }
 
-#poisonvisual {
-  width: 500;
-  height: 400;
-  animation: floating 10s infinite linear;
-}
-
-// #potionvisual {
-//   width: 450px;
-//   height: 450px;
+// #poisonvisual {
+//   width: 500;
+//   height: 400;
 //   animation: floating 10s infinite linear;
 // }
+
+#potionvisual {
+  width: 450px;
+  height: 450px;
+  animation: floating 10s infinite linear;
+}
 
 @keyframes radiate {
     0% {opacity: 1; transform: scale(0, 0)}

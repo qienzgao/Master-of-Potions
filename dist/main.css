@@ -676,9 +676,9 @@ body {
   animation: radiate 7s infinite ease-in-out 0.1s;
 }
 
-#poisonvisual {
-  width: 500;
-  height: 400;
+#potionvisual {
+  width: 450px;
+  height: 450px;
   animation: floating 10s infinite linear;
 }
 
