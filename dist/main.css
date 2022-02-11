@@ -523,6 +523,7 @@
   }
 }
 #locked-boximg {
+  width: 28%;
   animation: wobble 3s ease-in-out both infinite;
 }
 

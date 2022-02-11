@@ -14,7 +14,7 @@ class Canvas {
     
     write(output) {
         this.ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight); 
-        this.ctx.font = '2vw Apple Chancery, cursive';
+        this.ctx.font = '1.5vw Apple Chancery, cursive';
         this.ctx.fillStyle = 'white'
         this.ctx.textAlign = 'center';
         this.ctx.fillText(output, 450, 60);
