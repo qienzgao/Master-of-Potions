@@ -5,6 +5,7 @@
   bottom: 0;
   left: 0;
   z-index: -999;
+  object-fit: fill;
 }
 
 @keyframes mymove {
@@ -51,7 +52,7 @@
     left: 0;
     right: 0;
     z-index: -4;
-    animation: mymove 20s infinite linear
+    animation: mymove 20s infinite linear;
 }
 
 
@@ -65,7 +66,7 @@
     top: -35%;
     left: -15%;
     z-index: -5;
-    animation: rerotate 100s infinite linear
+    animation: rerotate 100s infinite linear;
 }
 #sign3 {
     opacity: 0.5;
@@ -77,7 +78,7 @@
     top: 50%; 
     right: 0;
     z-index: -6;
-    animation: mymove 60s infinite linear
+    animation: mymove 60s infinite linear;
 }
 
 #sign4 {
@@ -90,7 +91,7 @@
     top: -20%;
     left: 50%;
     z-index: -7;
-    animation: mymove 70s infinite linear
+    animation: mymove 70s infinite linear;
 }
 
 .popup {

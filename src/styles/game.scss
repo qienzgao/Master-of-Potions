@@ -66,6 +66,7 @@ time, mark, audio, video {
   
   .controller-container img {
     opacity: 0.8;
+    object-fit: cover;
   }
 
   .controller-container img:hover {
@@ -85,6 +86,7 @@ time, mark, audio, video {
 
 
 .tools-container {
+  // position: fixed;
   color: lightblue;
   font-family: Luminari, fantasy;
   font-size: larger;
@@ -190,7 +192,7 @@ time, mark, audio, video {
     }
 
 .info-container {
-  position: absolute; 
+  position: fixed; 
   bottom: 30px;
   left: 50px;
   margin: auto;
