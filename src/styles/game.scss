@@ -142,17 +142,18 @@
     transition: ease-out 0.3s;
     cursor: pointer;
   }
-    .tools-container button::before {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: palegreen;
-      border-radius: 50px;
-      content: '';
-      mix-blend-mode: color-burn;
-      transition: 0.2s all ease;
+  .tools-container button::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: palegreen;
+    border-radius: 50px;
+    content: '';
+    color: white;
+    mix-blend-mode: color-burn;
+    transition: 0.2s all ease;
     }
     .tools-container button:hover {
       // box-shadow: inset 200px 0 0 0 pink;
@@ -214,6 +215,7 @@
       border-radius: 50px;
       content: '';
       mix-blend-mode: color-burn;
+      color: white;
       transition: 0.2s all ease;
     }
     .ingredients-container button:hover {

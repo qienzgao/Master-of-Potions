@@ -136,6 +136,7 @@
   background: palegreen;
   border-radius: 50px;
   content: "";
+  color: white;
   mix-blend-mode: color-burn;
   transition: 0.2s all ease;
 }
@@ -200,6 +201,7 @@
   border-radius: 50px;
   content: "";
   mix-blend-mode: color-burn;
+  color: white;
   transition: 0.2s all ease;
 }
 
