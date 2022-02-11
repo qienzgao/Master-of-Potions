@@ -63,7 +63,7 @@
     margin: auto;
     display: block;
     height: 132%;
-    position: absolute;
+    position: fixed;
     top: -35%;
     right: 49%;
     // left: -15%;
@@ -77,7 +77,7 @@
     display: block;
     height: 132%;
     width: auto;
-    position: absolute;
+    position: fixed;
     bottom: -83%; 
     // top: 50%;
     left: 30%;
@@ -92,7 +92,7 @@
     margin: auto;
     display: block;
     height: 110%;
-    position: absolute;
+    position: fixed;
     top: -20%;
     left: 50%;
     z-index: -7;

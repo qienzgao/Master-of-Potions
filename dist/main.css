@@ -277,7 +277,7 @@ time, mark, audio, video {
   margin: auto;
   display: block;
   height: 132%;
-  position: absolute;
+  position: fixed;
   top: -35%;
   right: 49%;
   z-index: -5;
@@ -291,7 +291,7 @@ time, mark, audio, video {
   display: block;
   height: 132%;
   width: auto;
-  position: absolute;
+  position: fixed;
   bottom: -83%;
   left: 30%;
   z-index: -6;
@@ -304,7 +304,7 @@ time, mark, audio, video {
   margin: auto;
   display: block;
   height: 110%;
-  position: absolute;
+  position: fixed;
   top: -20%;
   left: 50%;
   z-index: -7;
