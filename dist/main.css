@@ -1,45 +1,27 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
 #title {
+  position: fixed;
   color: lightblue;
   font-family: Luminari, fantasy;
-  font-size: 2.5rem;
+  font-size: 1.2vw;
   text-align: center;
-  margin: auto;
+  top: 0;
+  left: 24%;
   width: 50%;
-  padding: 20px;
+  padding: 1%;
+  vertical-align: baseline;
 }
 
 #text-canvas {
   padding: 0;
-  margin: auto;
   display: block;
   background-color: transparent;
   position: absolute;
+  left: 20%;
   bottom: 15%;
-  left: 0;
+  width: 60%;
   right: 0;
   z-index: -1;
 }
@@ -47,7 +29,6 @@ time, mark, audio, video {
 .controller-container {
   position: fixed;
   text-align: center;
-  margin: auto;
   width: 100%;
   padding: 7px;
   bottom: 2%;
@@ -100,28 +81,34 @@ time, mark, audio, video {
   }
 }
 .tools-container {
+  position: absolute;
   color: lightblue;
   font-family: Luminari, fantasy;
-  font-size: larger;
+  font-size: 1vw;
   text-align: center;
+  align-items: center;
   display: flex;
-  float: right;
+  top: 0;
+  right: 3%;
+  width: 8%;
+  height: 60%;
   flex-direction: column;
-  padding: 3%;
+  padding: 5%;
 }
 
 .tools-container button {
   opacity: 0.6;
   font-family: URW Chancery L, cursive;
+  font-size: 1.3vw;
   font-weight: bolder;
-  font-size: 20px;
   background: none;
   position: relative;
   padding: auto;
   border: none;
-  margin-top: 15px;
+  margin-top: 10%;
   mix-blend-mode: screen;
-  width: 200px;
+  width: 200%;
+  height: 100%;
   transition: ease-out 0.3s;
   cursor: pointer;
 }
@@ -155,28 +142,34 @@ time, mark, audio, video {
 }
 
 .ingredients-container {
+  position: absolute;
   color: lightblue;
   font-family: Luminari, fantasy;
   text-align: center;
-  font-size: larger;
+  align-items: center;
+  font-size: 1vw;
   display: flex;
-  float: left;
+  top: 0;
+  left: 3%;
+  width: 8%;
+  height: 70%;
   flex-direction: column;
-  padding: 3%;
+  padding: 5%;
 }
 
 .ingredients-container button {
   opacity: 0.9;
   font-family: URW Chancery L, cursive;
-  font-size: 20px;
+  font-size: 1.4vw;
   font-weight: bolder;
   background: none;
   position: relative;
   padding: auto;
   border: none;
-  margin-top: 15px;
+  margin-top: 10%;
   mix-blend-mode: screen;
-  width: 200px;
+  width: 200%;
+  height: 100%;
   transition: ease-out 0.3s;
   cursor: pointer;
 }
@@ -355,9 +348,9 @@ time, mark, audio, video {
 .open {
   cursor: pointer;
   opacity: 0.8;
-  position: fixed;
-  bottom: 30px;
-  right: 100px;
+  position: absolute;
+  bottom: 7%;
+  right: 8%;
   background: none;
   border: none;
   animation: floating 5s infinite linear;

@@ -144,9 +144,9 @@
 .open{
   cursor: pointer;
   opacity: 0.8;
-  position: fixed;
-  bottom: 30px;
-  right: 100px;  
+  position: absolute;
+  bottom: 7%;
+  right: 8%;  
   background: none;
   border: none;
   animation: floating 5s infinite linear;
