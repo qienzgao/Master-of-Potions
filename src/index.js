@@ -57,6 +57,7 @@ document.getElementById('dark-room').addEventListener('click', () => {
 
 document.getElementById('laser-pointer').addEventListener('click', () => {
     setTimeout(() => {
+        unshow();
         show('#catimg')
         newCanvas.write(tool.selectedTool('laserPointer', ingredient));
     }, 2222);

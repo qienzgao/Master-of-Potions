@@ -73,7 +73,7 @@
     border: none;
     width: 10%;
     height: 100%;
-     margin-left: 3%;
+    margin-left: 3%;
     margin-right: 3%; 
   }
 
@@ -96,6 +96,11 @@
     animation: shake 1s ease-in-out both;
   }  
 
+  #brewimg {
+    opacity: 1;
+    animation: shakeplus 2s ease-in both infinite;
+  }
+
   @keyframes shake {
     0% {transform: rotate(0deg) translate3d(0, 0, 0); transform-origin: bottom }
     20% {transform: rotate(10deg) translate3d(0, 0, 0); transform-origin: bottom }
@@ -105,6 +110,18 @@
     100% {transform: rotate(0deg) translate3d(0, 0, 0); transform-origin: bottom }
   }
   
+  @keyframes shakeplus {
+    0% {transform: rotate(0deg) translate3d(0, 0, 0); transform-origin: bottom }
+    10% {transform: rotate(10deg) translate3d(0, 0, 0); transform-origin: bottom }
+    20% {transform: rotate(-10deg) translate3d(0, 0, 0); transform-origin: bottom }
+    30% {transform: rotate(6deg) translate3d(0, 0, 0); transform-origin: bottom }
+    40% {transform: rotate(-4deg) translate3d(0, 0, 0); transform-origin: bottom  }
+    50% {transform: rotate(0deg) translate3d(0, 0, 0); transform-origin: bottom }
+    65% {transform: scale(1, 1) }
+    80% {transform: scale(1.5, 1.5) }
+    // 90% {transform: scale(1.25, 1.25)}
+    100% {transform: scale(1, 1) }
+  }
 
 
 .tools-container {

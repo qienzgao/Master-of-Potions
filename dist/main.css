@@ -65,6 +65,11 @@
   animation: shake 1s ease-in-out both;
 }
 
+#brewimg {
+  opacity: 1;
+  animation: shakeplus 2s ease-in both infinite;
+}
+
 @keyframes shake {
   0% {
     transform: rotate(0deg) translate3d(0, 0, 0);
@@ -89,6 +94,41 @@
   100% {
     transform: rotate(0deg) translate3d(0, 0, 0);
     transform-origin: bottom;
+  }
+}
+@keyframes shakeplus {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+    transform-origin: bottom;
+  }
+  10% {
+    transform: rotate(10deg) translate3d(0, 0, 0);
+    transform-origin: bottom;
+  }
+  20% {
+    transform: rotate(-10deg) translate3d(0, 0, 0);
+    transform-origin: bottom;
+  }
+  30% {
+    transform: rotate(6deg) translate3d(0, 0, 0);
+    transform-origin: bottom;
+  }
+  40% {
+    transform: rotate(-4deg) translate3d(0, 0, 0);
+    transform-origin: bottom;
+  }
+  50% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+    transform-origin: bottom;
+  }
+  65% {
+    transform: scale(1, 1);
+  }
+  80% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
   }
 }
 .tools-container {
@@ -337,8 +377,9 @@
   border: solid white;
   border-radius: 50px;
   z-index: 10;
-  background-color: rgba(80, 255, 130, 0.5);
+  background-color: rgba(80, 255, 150, 0.5);
   width: 700px;
+  length: 350px;
   max-width: 80%;
 }
 
@@ -407,7 +448,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(98, 100, 180, 0.4);
+  background-color: rgba(110, 120, 180, 0.5);
   transition: 200ms ease-in-out;
   pointer-events: none;
 }

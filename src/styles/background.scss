@@ -108,8 +108,9 @@
   border: solid white;
   border-radius: 50px;
   z-index: 10;
-  background-color: rgba(80, 255, 130, 0.5);
+  background-color: rgba(80, 255, 150, 0.5);
   width: 700px; 
+  length: 350px;
   max-width: 80%;
 }
 
@@ -179,7 +180,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(98, 100, 180, 0.4);
+  background-color: rgba(110, 120, 180, 0.5);
   transition: 200ms ease-in-out;
   pointer-events: none;
 }
