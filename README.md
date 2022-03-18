@@ -1,5 +1,5 @@
 # JS-Project: Master of Potions
-LIVE(https://qienzgao.github.io/Master-of-Potions/)
+[LIVE](https://qienzgao.github.io/Master-of-Potions/)
 
 # Background 
 Master of Potions is a game which users should be able to play around with different materials to make magical potions. The game will mainly focus on animation/visualization that create a fantasy-like vibe along with magical interaction with users. The main game scene will be in a lab-like environment and all kinds of materials will be display on different places around the lab. Users can hover over materials to see certain effects and click on the material to manipulate it accordingly. 
