@@ -38,7 +38,7 @@ class Tool {
             this.created = 'Broken heart';
             return `${this.created} is created! Extract it if you'd like to add it to your pot.`;
         } else {
-            return 'Why cutting it?';
+            return 'Why are you cutting it?';
         }
     }
 
@@ -78,7 +78,7 @@ class Tool {
         }
     }
 
-    
+
 
     love(ingredient) {
         if (ingredient.selected === 'Mask') {
