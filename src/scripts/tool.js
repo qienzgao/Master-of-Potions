@@ -78,6 +78,8 @@ class Tool {
         }
     }
 
+    
+
     love(ingredient) {
         if (ingredient.selected === 'Mask') {
             this.created = 'Happy face';

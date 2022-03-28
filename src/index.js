@@ -130,6 +130,17 @@ document.getElementById('dream').addEventListener('click', () => {
     tool.created = 'Fragment of a nightmare'; 
 })
 
+document.getElementById('phantasy').addEventListener('click', () => {
+    ingredient.setSelected('Phantasy');
+    unshow();
+    show('#dreamimg')
+    newCanvas.write('Chase the phantasy!')
+    setTimeout(() => {
+        newCanvas.write(`Dizzy phantasy is created! Extract it if you'd like to add it to your pot`)
+    }, 3333);
+    tool.created = 'Dizzy phantasy';
+})
+
 
 //manipulations:
 
