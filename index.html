@@ -51,13 +51,13 @@
     <!-- <img id="text-box" src="/src/images/textbox.png" width="1300" height="150"> -->
         
     <div class="controller-container">
-        <button id="redo"><img id="redoimg" src="src/images/redo.png" alt="REDO" ></button>
+        <button id="redo"><img id="redoimg" src="src/images/redo.png" alt="REDO" ><span>REDO</span></button>
         <!-- width="85" height="85" -->
-        <button id="burn"><img id="burnimg" src="src/images/burn.png" alt="BURN" ></button>
+        <button id="burn"><img id="burnimg" src="src/images/burn.png" alt="BURN" ><span>BURN</span></button>
         <!-- width="60" height="80" -->
-        <button id="extract"><img id="extrimg" src="src/images/extract.png" alt="EXTR" ></button>
+        <button id="extract"><img id="extrimg" src="src/images/extract.png" alt="EXTR" ><span>EXTRACT</span></button>
         <!-- width="90" height="90" -->
-        <button id="brew"><img id="brewimg" src="src/images/brew.png" alt="BREW" ></button>
+        <button id="brew"><img id="brewimg" src="src/images/brew.png" alt="BREW" ><span>BREW</span></button>
         <!-- width="85" height="85" -->
     </div>
 
@@ -98,7 +98,7 @@
     <div class="popup" id="popup">
         <div class="popup-header">
             <div id="popup-title">INTRODUCTION</div>
-            <button data-close-button id="close-button"></button>
+            <button data-close-button id="close-button">&times;</button>
         </div>
         <div id="popup-body"> 
             <ul>
@@ -113,9 +113,15 @@
                 <li>You may hit brew<img src="src/images/brew.png" width="30" height="30"></img> anytime to generate the potion, but remember: most
                     of potions are combined with three processed ingredients!</li>
                  <li>Here is some formula for you to try out:</li>
-                <li>[Cutification Potion] for you to test out: [Cutification Potion] = 1[Dragon saliva] + 1[Cat attention]</li>
+                <li>[Cutification Potion] = 1 * [Dragon saliva] + 1 * [Cat attention]</li>
+                <li>[Truelove Potion] = 1 * [A happy face] + 1 * [Fragment of a dream] + 1 * [Laughing flower]</li>
+                <li>[Veritaserum] = 1 * [Dizzy phantasy] + 1 * [Fragment of a dream] + 1 * [Sweet nothings]</li>
+                <li>[Amortentia] = 1 * [A happy face] + 1 * [Dizzy phantasy] + 1 * [Broken heart]</li>
+                <li>[Laugh Potion] = 1 * [Laughing flower] + 1 * [Cat attention] + [Dragon saliva]</li>
+                <li>[Heartless Potion] = 1 * [Broken heart] + 1 * [Sweet nothings] + 1 * [Frozen tears]</li>
             </ul>
         </div>
+        
     </div>
     <div id="overlay"></div>
     <script src="./dist/main.js"></script>

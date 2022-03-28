@@ -49,6 +49,10 @@
   margin-right: 3%;
 }
 
+.controller-container span {
+  opacity: 0;
+}
+
 .controller-container img {
   opacity: 0.8;
   object-fit: fill;
@@ -60,9 +64,13 @@
   width: 70%;
 }
 
-.controller-container img:hover {
+.controller-container button:hover img {
   opacity: 1;
   animation: shake 1s ease-in-out both;
+}
+
+.controller-container button:hover span {
+  opacity: 1;
 }
 
 #brewimg {
@@ -380,8 +388,8 @@
   z-index: 10;
   background-color: rgba(80, 255, 150, 0.5);
   width: 700px;
-  length: 350px;
   max-width: 80%;
+  padding: 0 0 2em 0;
 }
 
 .popup.active {
@@ -396,19 +404,21 @@
 }
 
 .popup-header #popup-title {
-  color: white;
+  color: black;
   font-family: Luminari, fantasy;
   font-size: 1.25rem;
   font-weight: bolder;
+  margin-top: 1em;
 }
 
-#close {
+#close-button {
   cursor: pointer;
   border: none;
   outline: none;
-  background: none;
-  font-size: 1.5rem;
+  background: transparent;
+  font-size: 2rem;
   font-weight: bold;
+  margin-top: auto;
 }
 
 .open {
@@ -438,8 +448,11 @@
 #popup-body {
   font-family: Luminari, fantasy;
   font-size: 1.25rem;
-  color: white;
-  padding: 30px 30px;
+  max-height: 20em;
+  color: black;
+  padding: 0 20px 0 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 #overlay {
