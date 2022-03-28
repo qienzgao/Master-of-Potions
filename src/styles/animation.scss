@@ -322,6 +322,7 @@
     display: none;
     justify-content: center;
     align-items: center;
+    z-index: -2;
 }
 
 .eye {
@@ -422,7 +423,7 @@
   animation: rerotate 0.2s infinite linear;
   width: 20%;
   height: auto;
-  z-index: 9999999;
+  z-index: 99;
     position: absolute;
     transform: translate(-50%, -50%);
 }
