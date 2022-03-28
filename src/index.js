@@ -1,7 +1,7 @@
 // import button from "./scripts/background"
-import Tool from "./scripts/tool"
-import Ingredient from "./scripts/ingredient"
-import Canvas from "./scripts/canvas"
+import Ingredient from "./scripts/ingredient";
+import Canvas from "./scripts/canvas";
+import Tool from "./scripts/tool";
 // import Display from "./scripts/display"
 
 let tool = new Tool(); 
@@ -11,7 +11,8 @@ let potion = null;
 
 //display:
 let showlist = document.querySelectorAll('.show img');
-let eyesimg = document.getElementById('eyesimg')
+let eyesimg = document.getElementById('eyesimg'); 
+
 function show(id) {
     let showimg = document.querySelector(id)
     showimg.style.display = 'flex';
@@ -21,6 +22,7 @@ function unshow(){
     for (let i = 0; i < showlist.length; i++) {
         showlist[i].style.display = 'none';
         eyesimg.style.display = 'none'; 
+        
     }
 }
 
@@ -61,7 +63,7 @@ document.getElementById('laser-pointer').addEventListener('click', () => {
         unshow();
         show('#catimg')
         newCanvas.write(tool.selectedTool('laserPointer', ingredient));
-    }, 2222);
+    }, 300);
 })
 
 document.getElementById('dragon').addEventListener('click', () => {
@@ -134,11 +136,11 @@ document.getElementById('dream').addEventListener('click', () => {
 document.getElementById('phantasy').addEventListener('click', () => {
     ingredient.setSelected('Phantasy');
     unshow();
-    show('#dreamimg')
-    newCanvas.write('Chase the phantasy!')
+    show('#phantasyimg')
+    newCanvas.write('Chase and catch the phantasy!')
     setTimeout(() => {
         newCanvas.write(`Dizzy phantasy is created! Extract it if you'd like to add it to your pot`)
-    }, 3333);
+    }, 5555);
     tool.created = 'Dizzy phantasy';
 })
 
@@ -260,8 +262,5 @@ checkPot.addEventListener('click', ()=> {
     body2.classList.add('show');
     ingredient.inPot();
 })
-
-
-
 
 
