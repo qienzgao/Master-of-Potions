@@ -257,6 +257,7 @@ checkPot.addEventListener('click', ()=> {
     title2.classList.add('show');
     body1.classList.add('unshow');
     body2.classList.add('show');
+    ingredient.inPot();
 })
 
 

@@ -16,6 +16,22 @@ class Ingredient {
         this.materials.push(material);
     }
 
+    inPot(){
+        let list = document.getElementById('materials');
+        let prepared = this.materials;
+        list.innerHTML = "";
+        
+        if (this.materials.length === 0) {
+            return list.innerHTML = "There's nothing in your pot yet!"
+        } else {
+                prepared.forEach((material) => {
+                let li = document.createElement("li");
+                li.innerText = material;
+                list.appendChild(li);
+            })
+        }
+    }
+
     brew(){
         if(this.materials.includes('Laughing flower') &&
             this.materials.includes('Cat attention') && 
