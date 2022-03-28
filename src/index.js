@@ -202,6 +202,7 @@ document.getElementById('redo').addEventListener('click', () => {
 const openPopupButton = document.querySelectorAll('[data-popup-target]');
 const closePopupButton = document.querySelectorAll('[data-close-button]');
 const overlay = document.getElementById('overlay');
+const checkPot = document.getElementById('checkpot');
 
 openPopupButton.forEach(button => {
     button.addEventListener('click', () => {
@@ -227,6 +228,16 @@ closePopupButton.forEach(button => {
 
 function openPopup(popup){
     if (popup == null ) return; 
+
+    const body1 = document.getElementById('popup-body');
+    const body2 = document.getElementById('popup-body2');
+    const title = document.getElementById('popup-title');
+    const title2 = document.getElementById('popup-title2');
+    title.classList.remove('unshow', 'show');
+    title2.classList.remove('show', 'unshow');
+    body1.classList.remove('unshow', 'show');
+    body2.classList.remove('show', 'unshow'); 
+
     popup.classList.add('active'); 
     overlay.classList.add('active'); 
 }
@@ -237,6 +248,16 @@ function closePopup(popup) {
     overlay.classList.remove('active'); 
 }
 
+checkPot.addEventListener('click', ()=> {
+    const body1 = document.getElementById('popup-body');
+    const body2 = document.getElementById('popup-body2');
+    const title = document.getElementById('popup-title')
+    const title2 = document.getElementById('popup-title2')
+    title.classList.add('unshow');
+    title2.classList.add('show');
+    body1.classList.add('unshow');
+    body2.classList.add('show');
+})
 
 
 
