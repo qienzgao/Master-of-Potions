@@ -51,6 +51,8 @@
 
 .controller-container span {
   opacity: 0;
+  font-family: Luminari, fantasy;
+  font-size: 1.3em;
 }
 
 .controller-container img {
@@ -432,6 +434,9 @@
   background: none;
   border: none;
   animation: floating 5s infinite linear;
+  color: white;
+  font-family: luminari, fantasy;
+  font-size: 1em;
 }
 
 .open img {
