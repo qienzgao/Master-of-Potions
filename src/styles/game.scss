@@ -106,10 +106,10 @@
     opacity: 1;
   }  
 
-  #brewimg {
-    opacity: 1;
-    animation: shakeplus 2s ease-in both infinite;
-  }
+  // #brewimg {
+  //   opacity: 1;
+  //   animation: shakeplus 2s ease-in both infinite;
+  // }
 
   @keyframes shake {
     0% {transform: rotate(0deg) translate3d(0, 0, 0); transform-origin: bottom }

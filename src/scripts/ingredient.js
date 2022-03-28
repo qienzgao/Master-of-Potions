@@ -20,7 +20,7 @@ class Ingredient {
         let list = document.getElementById('materials');
         let prepared = this.materials;
         list.innerHTML = "";
-        
+
         if (this.materials.length === 0) {
             return list.innerHTML = "There's nothing in your pot yet!"
         } else {
@@ -69,7 +69,7 @@ class Ingredient {
             this.materials.includes('Happy face') &&
             this.materials.includes('Secret ingredient') &&
             this.materials.length === 6) {
-            return 'Elixir of everlasting happiness: Thank you my love, I never knew that I could be so happy before meeting you'
+            return 'Elixir of everlasting happiness: Thank you, I never knew I could be so happy before meeting you!'
         } else {
             return `You've made something strange...(definitely not a potion!)`
         }

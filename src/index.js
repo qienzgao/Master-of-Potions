@@ -11,15 +11,16 @@ let potion = null;
 
 //display:
 let showlist = document.querySelectorAll('.show img');
+let eyesimg = document.getElementById('eyesimg')
 function show(id) {
     let showimg = document.querySelector(id)
-    showimg.style.display = 'block';
+    showimg.style.display = 'flex';
 };
 
 function unshow(){
     for (let i = 0; i < showlist.length; i++) {
         showlist[i].style.display = 'none';
-        // console.log(showlist[i]);
+        eyesimg.style.display = 'none'; 
     }
 }
 
