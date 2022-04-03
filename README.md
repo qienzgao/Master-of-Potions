@@ -21,6 +21,6 @@ Master of Potions (MOP) is a webpage application game where players can interact
 <img src="https://github.com/qienzgao/Master-of-Potions/blob/main/src/images/potion_created.png"/>
 
 ### Game Play
-<img src="https://github.com/qienzgao/Master-of-Potions/blob/main/src/images/dragon.gif" width=500 height=250/> <img src="https://github.com/qienzgao/Master-of-Potions/blob/main/src/images/mop.gif" width=500 height=250/>
+<img src="https://github.com/qienzgao/Master-of-Potions/blob/main/src/images/dragon.gif" width=450 height=230/> <img src="https://github.com/qienzgao/Master-of-Potions/blob/main/src/images/mop.gif" width=450 height=230/>
 
 
